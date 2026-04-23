@@ -1,1 +1,3 @@
 # Diplomski-projekt
+
+tvoja mama
