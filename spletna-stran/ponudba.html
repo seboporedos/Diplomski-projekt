@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="sl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponudba | Turistična kmetija Smodiš</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ponudba.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/ponudba.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <button id="scrollTopBtn" aria-label="Na vrh">↑</button>
+
+    <header class="header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">Turistična kmetija Smodiš</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Domov</a></li>
+            <li><a href="o-nas.html">O kmetiji</a></li>
+            <li><a href="ponudba.html" class="active">Ponudba</a></li>
+            <li><a href="cenik.html">Cenik</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Odpri meni">☰</button>
+      </div>
+    </header>
+
+    <section class="podstrani-hero"></section>
+
+    <main class="container">
+      <h1 class="page-title">Ponudba</h1>
+
+      <!-- 1. NASTANITEV (s carouselom) -->
+      <section class="ponudba-sekcija">
+        <div class="ponudba-tekst">
+          <h2>Možnost nastanitve</h2>
+          <p>
+            Nudimo vam prenočišče v 6 različnih sobah, kjer imamo prostor za 14
+            ležišč.
+          </p>
+          <p>
+            Vsake soba ima tudi svojo kopalnico in toaleto. Po želji lahko sobo
+            opremimo tudi s televizorjem ali dodamo še kakšno dodatno ležišče.
+          </p>
+          <p>Tako lahko na kmetiji prenoči 25 gostov.</p>
+          <div class="btn-wrapper">
+            <a href="cenik.html" class="btn-cenik">Cenik</a>
+          </div>
+        </div>
+        <div class="ponudba-slika">
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="img/copy.jpg" alt="Soba 1" />
+              <img src="img/copy.jpg" alt="Soba 2" />
+              <img src="img/copy.jpg" alt="Soba 3" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Prejšnja">
+              &#8249;
+            </button>
+            <button class="carousel-btn next" aria-label="Naslednja">
+              &#8250;
+            </button>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. GOSTINSKI PROSTOR -->
+      <section class="ponudba-sekcija reverse">
+        <div class="ponudba-tekst">
+          <h2>Večnamenski gostinski prostor</h2>
+          <p>
+            Prostor lahko najamete za različna slavja, zaključne prireditve,
+            izobraževalne seminarje, degustacije in še več.
+          </p>
+        </div>
+        <div class="ponudba-slika">
+          <img src="img/copy.jpg" alt="Gostinski prostor" />
+        </div>
+      </section>
+
+      <!-- 3. KULINARIKA -->
+      <section class="ponudba-sekcija">
+        <div class="ponudba-tekst">
+          <h2>Kulinarika</h2>
+          <p>
+            Turistična kmetija je pravi naslov za tiste, ki si želijo poskusiti
+            pravo domačo kulinariko.
+          </p>
+          <p>
+            V shrambi imamo vedno sestavine za hladne narezke in dober kruh, po
+            dogovoru pa pripravimo tudi vse prekmurske specialitete in tudi
+            ostale jedi.
+          </p>
+          <p>Med drugim lahko poskusite tudi naše domače vino ali žganje.</p>
+        </div>
+        <div class="ponudba-slika">
+          <img src="img/copy.jpg" alt="Kulinarika" />
+        </div>
+      </section>
+
+      <!-- 4. AKTIVNOSTI -->
+      <section class="ponudba-sekcija reverse">
+        <div class="ponudba-tekst">
+          <h2>Možnost za razne aktivnosti</h2>
+          <p>
+            Okolica ponuja bogate možnosti za kolesarjenje, treking, sprostitev
+            ali počitek, tudi pomoč pri opravilih na kmetiji.
+          </p>
+          <p>
+            V fazi posodobitve imamo tudi novo fitnes sobo ter savno, ki je še v
+            izgradnji.
+          </p>
+          <p>
+            Imamo tudi možnost izposoje koles (2x moški kolesi in 2x žensko
+            kolo).
+          </p>
+        </div>
+        <div class="ponudba-slika">
+          <img src="img/copy.jpg" alt="Aktivnosti" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <h2>Turistična kmetija Smodiš</h2>
+        <p class="footer-slogan">
+          Mir, narava in domačnost v osrčju Goričkega.
+        </p>
+
+        <div class="footer-contact">
+          <h3>Kontakt</h3>
+          <p>Otovci 58a</p>
+          <p>9202 Mačkovci</p>
+          <p>Tel: 02 551 60 50</p>
+          <p>E-pošta: tksmodis@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-icons">
+        <a href="tel:+38625516050" aria-label="Telefon">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:tksmodis@gmail.com" aria-label="E-pošta">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Turistična+kmetija+Smodiš+Otovci+58a+Mačkovci"
+          target="_blank"
+          aria-label="Lokacija"
+        >
+          <i class="fas fa-location-dot"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+      </div>
+    </footer>
+  </body>
+</html>

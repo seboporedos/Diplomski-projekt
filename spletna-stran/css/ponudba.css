@@ -1,0 +1,136 @@
+/* ===========================
+   PONUDBA - mobile first
+=========================== */
+
+/* Vsaka sekcija: slika zgoraj, tekst spodaj */
+.ponudba-sekcija {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.ponudba-slika img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.ponudba-tekst h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.ponudba-tekst p {
+  margin-bottom: 5px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ===========================
+   CAROUSEL
+=========================== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(53, 96, 62, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(53, 96, 62, 1);
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+.carousel-btn.next {
+  right: 8px;
+}
+
+.carousel-dots {
+  text-align: center;
+  padding: 10px 0 5px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #2d5235;
+}
+
+/* ===========================
+   DESKTOP - izmenjevanje levo/desno
+=========================== */
+@media (min-width: 768px) {
+  .ponudba-sekcija {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .ponudba-slika {
+    flex: 0 0 40%; /* namesto flex: 1 — slika zavzame 40% širine */
+  }
+
+  .ponudba-tekst {
+    flex: 1;
+  }
+
+  .ponudba-tekst h2 {
+    font-size: 35px;
+  }
+}
+
+.btn-cenik {
+  display: inline-block;
+  background: #b48e1f;
+  color: #fff;
+  border: 2px solid #b48e1f;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-cenik:hover {
+  background: transparent;
+  color: #b48e1f;
+}

@@ -1,0 +1,59 @@
+/* ===========================
+   CENIK
+=========================== */
+
+.price-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.price-table th {
+  background: #4f5d2f;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.price-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table tr:hover {
+  background: #f9f9f9;
+}
+
+.price-note {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.price-note p {
+  margin-bottom: 10px;
+}
+
+.btn-cenik {
+  display: inline-block;
+  background: #b68c3d;
+  color: #fff;
+  border: 2px solid #b68c3d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-cenik:hover {
+  background: transparent;
+  color: #35603e;
+}
