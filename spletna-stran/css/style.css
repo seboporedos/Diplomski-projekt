@@ -22,7 +22,7 @@ body {
 
 /* HEADER */
 .header {
-  background: #4f5d2f;
+  background: #3f4f28;
   color: #fff;
   padding: 15px 0;
   position: sticky;
@@ -63,7 +63,7 @@ body {
   left: 0;
   width: 100%;
 
-  background: #4f5d2f;
+  background: #3f4f28;
   text-align: center;
 
   max-height: 0;
@@ -100,23 +100,17 @@ body {
   transition: color 0.3s ease;
 }
 
-/* hover / active */
-.main-nav a:hover,
-.main-nav a.active {
-  color: #d2b15a;
-}
-
 /* ===========================
    Hero sekcija
 =========================== */
 .hero {
   position: relative;
-  min-height: 450px; /* Ali poljubna višina */
+  min-height: 95vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 100px;
   overflow: hidden;
-  color: white; /* Da bo besedilo vidno */
-  border-bottom: 4px solid #d2b15a;
+  color: white;
 }
 
 .hero-bg-img {
@@ -126,7 +120,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; /* To nadomesti background-size: cover */
-  z-index: -1; /* Postavi sliko pod besedilo */
+  object-position: 30% center;
 }
 
 .hero-content {
@@ -140,29 +134,35 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(46, 46, 45, 0.6);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 35%,
+    rgba(0, 0, 0, 0.05) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .hero .container {
   position: relative;
-  z-index: 3;
 }
 
 .hero h1 {
-  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  letter-spacing: 0.5px;
 }
 
 .hero p {
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
 /* NASLOVNA PODSTRANI */
 .podstrani-hero {
   background: url("../img/hero.webp") center 60% / cover no-repeat;
-  height: 250px;
+  height: 300px;
   position: relative;
-  border-bottom: 4px solid #d2b15a;
 }
 
 /* ===========================
@@ -291,7 +291,17 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
+  .hero {
+    align-items: flex-start;
+    padding-top: 120px;
+    min-height: 95vh;
+  }
+
   .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero p {
     font-size: 30px;
   }
 
@@ -347,9 +357,26 @@ body {
     padding: 0;
   }
 
-  /* nižji header */
-  .header {
-    padding: 15px 0;
+  .main-nav a:hover,
+  .main-nav a.active {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1.5px;
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 95px;
+    min-height: 95vh;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero p {
+    font-size: 25px;
   }
 }
 

@@ -1,0 +1,83 @@
+/* ===========================
+   O KMETIJI - mobile first
+=========================== */
+
+/* Slika z overlay besedilom */
+.slika-overlay {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.slika-overlay img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-tekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.overlay-tekst h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  t
+}
+
+.overlay-tekst p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Kje smo */
+.kje-smo {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.kje-smo h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.kje-smo p {
+  margin-bottom: 20px;
+}
+
+.kje-smo img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+  border: 1px solid #d4a843;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .slika-overlay img {
+    height: 750px;
+  }
+
+  .overlay-tekst {
+    padding: 20px;
+    max-width: 650px;
+  }
+
+  .overlay-tekst p {
+    font-size: 15px;
+  }
+}
