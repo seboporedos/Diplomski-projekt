@@ -31,6 +31,18 @@ scrollBtn.addEventListener("click", () => {
   });
 });
 
+// O Kmetiji JS
+const okSlides = document.querySelectorAll(".ok-slide");
+let okIdx = 0;
+
+if (okSlides.length) {
+  setInterval(() => {
+    okSlides[okIdx].classList.remove("active");
+    okIdx = (okIdx + 1) % okSlides.length;
+    okSlides[okIdx].classList.add("active");
+  }, 4500);
+}
+
 // GALERIJA JS
 
 const slike = document.querySelectorAll(".galerija-grid img");
@@ -41,7 +53,7 @@ let idx = 0;
 slike.forEach((s, i) =>
   s.addEventListener("click", () => {
     idx = i;
-    lightboxImg.src = s.src;
+    lightboxImg.src = s.dataset.src || s.src; // uporabi data-src, če je na voljo, sicer src
     lightbox.classList.add("active");
   }),
 );
@@ -52,12 +64,12 @@ document
 
 document.getElementById("lightboxPrev").addEventListener("click", () => {
   idx = (idx - 1 + slike.length) % slike.length;
-  lightboxImg.src = slike[idx].src;
+  lightboxImg.src = slike[idx].dataset.src || slike[idx].src;
 });
 
 document.getElementById("lightboxNext").addEventListener("click", () => {
   idx = (idx + 1) % slike.length;
-  lightboxImg.src = slike[idx].src;
+  lightboxImg.src = slike[idx].dataset.src || slike[idx].src;
 });
 
 document.addEventListener("keydown", (e) => {
@@ -70,19 +82,13 @@ lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) lightbox.classList.remove("active");
 });
 
-let touchStart = 0;
-
-lightboxImg.addEventListener("touchstart", (e) => {
-  touchStart = e.touches[0].clientX;
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.src = entry.target.dataset.src;
+      observer.unobserve(entry.target);
+    }
+  });
 });
 
-lightboxImg.addEventListener("touchend", (e) => {
-  const diff = touchStart - e.changedTouches[0].clientX;
-  if (diff > 50) {
-    idx = (idx + 1) % slike.length;
-    lightboxImg.src = slike[idx].src;
-  } else if (diff < -50) {
-    idx = (idx - 1 + slike.length) % slike.length;
-    lightboxImg.src = slike[idx].src;
-  }
-});
+slike.forEach((slika) => observer.observe(slika));

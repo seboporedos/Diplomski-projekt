@@ -5,8 +5,8 @@
 .galerija-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 50px;
+  gap: 8px;
+  margin-bottom: 60px;
 }
 
 .galerija-grid img {
@@ -22,15 +22,15 @@
   opacity: 0.85;
 }
 
-/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.92);
   z-index: 1000;
   align-items: center;
   justify-content: center;
+  gap: 15px; /* razmak med puščico, sliko, puščico */
 }
 
 .lightbox.active {
@@ -38,8 +38,8 @@
 }
 
 .lightbox img {
-  max-width: 80vw;
-  max-height: 80vh;
+  max-width: 90vw;
+  max-height: 85vh;
   object-fit: contain;
   border-radius: 4px;
 }
@@ -55,28 +55,48 @@
   cursor: pointer;
 }
 
-.lightbox-btn {
-  display: none;
+.lightbox-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Tablet */
+.lightbox-wrapper img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  text-shadow: 0 0 8px rgba(1, 1, 1, 1);
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.lightbox-btn.prev {
+  left: 5px;
+}
+.lightbox-btn.next {
+  right: 5px;
+}
+
+/* Namesto dveh ločenih: */
 @media (min-width: 768px) {
   .galerija-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   .galerija-grid img {
-    height: 250px;
-  }
-
-  .lightbox-btn {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 60px;
-    cursor: pointer;
-    padding: 0 15px;
-    transition: color 0.3s;
+    height: 220px; /* ena vrednost za oba */
   }
 }

@@ -33,19 +33,25 @@
       </div>
     </header>
 
-    <section class="podstrani-hero"></section>
+    <section class="podstrani-hero">
+      <img
+        src="img/hero1000.webp"
+        srcset="
+          img/hero500.webp   500w,
+          img/hero1000.webp  750w,
+          img/hero2000.webp 1000w
+        "
+        sizes="100vw"
+        alt="Turistična kmetija Smodiš"
+      />
+    </section>
 
-    <main>
-      <!-- Naslov ostane v containerju -->
-      <div class="container">
-        <h1 class="page-title">O kmetiji</h1>
-      </div>
+    <main class="container page-content">
+      <h1 class="page-title">O kmetiji</h1>
 
-      <!-- Slika z overlayem — IZVEN containerja, čez celo širino -->
-      <div class="slika-overlay">
-        <img src="img/ozadje.jpg" alt="Turistična kmetija Smodiš" />
-        <div class="overlay-tekst">
-          <h2>Kratek opis</h2>
+      <div class="ok-vsebina">
+        <section class="ok-opis">
+          <h2>Dobrodošli na kmetiji Smodiš</h2>
           <p>
             Smo 4 članska družina specializirana za sadjarstvo in
             vinogradništvo, obdelujemo okrog 12 ha zemlje, na katerih je
@@ -69,22 +75,33 @@
             kmetije, ki vas popelje v svet narave, polnega različnih živali in
             pristnih, pozabljenih vrst sadja.
           </p>
-          <a href="galerija.html" class="btn">Več fotografij</a>
+        </section>
+
+        <div class="ok-carousel">
+          <a href="galerija.html" class="ok-carousel-link">
+            <div class="ok-carousel-track">
+              <img src="img/2.jpg" alt="Kmetija" class="ok-slide active" />
+              <img src="img/10.jpg" alt="Kmetija" class="ok-slide" />
+              <img src="img/3.jpg" alt="Kmetija" class="ok-slide" />
+            </div>
+            <div class="ok-carousel-overlay">
+              <span>Oglej si celotno galerijo</span>
+            </div>
+          </a>
         </div>
       </div>
 
-      <!-- Kje smo nazaj v containerju -->
-      <div class="container">
-        <section class="kje-smo">
-          <h2>Kje smo?</h2>
-          <p>
-            Nahajamo se v vasi Otovci, 200 m izven vasi Mačkovci, ob smerokazu
-            za vas Otovci. V vasi Mačkovci je tudi železniška postaja — po
-            dogovoru vam ponudimo tudi prevoz do naše kmetije.
-          </p>
-          <img src="img/karta.jpg" alt="Karta lokacije kmetije Smodiš" />
-        </section>
-      </div>
+      <hr class="locilo" />
+
+      <section class="kje-smo">
+        <h2>Kje smo?</h2>
+        <p>
+          Nahajamo se v vasi Otovci, 200 m izven vasi Mačkovci, ob smerokazu za
+          vas Otovci. V vasi Mačkovci je tudi železniška postaja — po dogovoru
+          vam ponudimo tudi prevoz do naše kmetije.
+        </p>
+        <img src="img/karta.jpg" alt="Karta lokacije kmetije Smodiš" />
+      </section>
     </main>
 
     <footer class="site-footer">

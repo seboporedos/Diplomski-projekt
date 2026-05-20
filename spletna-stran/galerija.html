@@ -39,44 +39,54 @@
       </div>
     </header>
 
-    <!-- hero podstrani -->
-    <section class="podstrani-hero"></section>
+    <section class="podstrani-hero">
+      <img
+        src="img/hero1000.webp"
+        srcset="
+          img/hero500.webp   500w,
+          img/hero1000.webp  750w,
+          img/hero2000.webp 1000w
+        "
+        sizes="100vw"
+        alt="Turistična kmetija Smodiš"
+      />
+    </section>
 
     <!-- vsebina -->
-    <main class="container">
+    <main class="container page-content">
       <h1 class="page-title">Galerija</h1>
 
       <div class="galerija-grid">
-        <img src="img/1.jpg" loading="lazy" alt="Galerija 1" />
-        <img src="img/2.jpg" loading="lazy" alt="Galerija 2" />
-        <img src="img/3.jpg" loading="lazy" alt="Galerija 3" />
-        <img src="img/4.jpg" loading="lazy" alt="Galerija 4" />
-        <img src="img/5.jpg" loading="lazy" alt="Galerija 5" />
-        <img src="img/6.jpg" loading="lazy" alt="Galerija 6" />
-        <img src="img/7.jpg" loading="lazy" alt="Galerija 7" />
-        <img src="img/8.jpg" loading="lazy" alt="Galerija 8" />
-        <img src="img/9.jpg" loading="lazy" alt="Galerija 9" />
-        <img src="img/10.jpg" loading="lazy" alt="Galerija 10" />
-        <img src="img/11.jpg" loading="lazy" alt="Galerija 11" />
-        <img src="img/12.jpg" loading="lazy" alt="Galerija 12" />
-        <img src="img/13.jpg" loading="lazy" alt="Galerija 13" />
-        <img src="img/14.jpg" loading="lazy" alt="Galerija 14" />
-        <img src="img/15.jpg" loading="lazy" alt="Galerija 15" />
-        <img src="img/16.jpg" loading="lazy" alt="Galerija 16" />
-        <img src="img/17.jpg" loading="lazy" alt="Galerija 17" />
-        <img src="img/18.jpg" loading="lazy" alt="Galerija 18" />
-        <img src="img/19.jpg" loading="lazy" alt="Galerija 19" />
-        <img src="img/20.jpg" loading="lazy" alt="Galerija 20" />
-        <img src="img/21.jpg" loading="lazy" alt="Galerija 21" />
-        <img src="img/22.jpg" loading="lazy" alt="Galerija 22" />
-        <img src="img/23.jpg" loading="lazy" alt="Galerija 23" />
-        <img src="img/24.jpg" loading="lazy" alt="Galerija 24" />
-        <img src="img/25.jpg" loading="lazy" alt="Galerija 25" />
-        <img src="img/26.jpg" loading="lazy" alt="Galerija 26" />
-        <img src="img/27.jpg" loading="lazy" alt="Galerija 27" />
-        <img src="img/28.jpg" loading="lazy" alt="Galerija 28" />
-        <img src="img/29.jpg" loading="lazy" alt="Galerija 29" />
-        <img src="img/30.jpg" loading="lazy" alt="Galerija 30" />
+        <img data-src="img/1.jpg" loading="lazy" alt="Galerija 1" />
+        <img data-src="img/2.jpg" loading="lazy" alt="Galerija 2" />
+        <img data-src="img/3.jpg" loading="lazy" alt="Galerija 3" />
+        <img data-src="img/4.jpg" loading="lazy" alt="Galerija 4" />
+        <img data-src="img/5.jpg" loading="lazy" alt="Galerija 5" />
+        <img data-src="img/6.jpg" loading="lazy" alt="Galerija 6" />
+        <img data-src="img/7.jpg" loading="lazy" alt="Galerija 7" />
+        <img data-src="img/8.jpg" loading="lazy" alt="Galerija 8" />
+        <img data-src="img/9.jpg" loading="lazy" alt="Galerija 9" />
+        <img data-src="img/10.jpg" loading="lazy" alt="Galerija 10" />
+        <img data-src="img/11.jpg" loading="lazy" alt="Galerija 11" />
+        <img data-src="img/12.jpg" loading="lazy" alt="Galerija 12" />
+        <img data-src="img/13.jpg" loading="lazy" alt="Galerija 13" />
+        <img data-src="img/14.jpg" loading="lazy" alt="Galerija 14" />
+        <img data-src="img/15.jpg" loading="lazy" alt="Galerija 15" />
+        <img data-src="img/16.jpg" loading="lazy" alt="Galerija 16" />
+        <img data-src="img/17.jpg" loading="lazy" alt="Galerija 17" />
+        <img data-src="img/18.jpg" loading="lazy" alt="Galerija 18" />
+        <img data-src="img/19.jpg" loading="lazy" alt="Galerija 19" />
+        <img data-src="img/20.jpg" loading="lazy" alt="Galerija 20" />
+        <img data-src="img/21.jpg" loading="lazy" alt="Galerija 21" />
+        <img data-src="img/22.jpg" loading="lazy" alt="Galerija 22" />
+        <img data-src="img/23.jpg" loading="lazy" alt="Galerija 23" />
+        <img data-src="img/24.jpg" loading="lazy" alt="Galerija 24" />
+        <img data-src="img/25.jpg" loading="lazy" alt="Galerija 25" />
+        <img data-src="img/26.jpg" loading="lazy" alt="Galerija 26" />
+        <img data-src="img/27.jpg" loading="lazy" alt="Galerija 27" />
+        <img data-src="img/28.jpg" loading="lazy" alt="Galerija 28" />
+        <img data-src="img/29.jpg" loading="lazy" alt="Galerija 29" />
+        <img data-src="img/30.jpg" loading="lazy" alt="Galerija 30" />
 
         <!-- dodaj do 30 slik -->
       </div>
@@ -84,9 +94,11 @@
       <!-- Lightbox -->
       <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightboxClose">✕</button>
-        <button class="lightbox-btn prev" id="lightboxPrev">&#8249;</button>
-        <img src="" alt="" id="lightboxImg" />
-        <button class="lightbox-btn next" id="lightboxNext">&#8250;</button>
+        <div class="lightbox-wrapper">
+          <button class="lightbox-btn prev" id="lightboxPrev">&#8249;</button>
+          <img src="" alt="" id="lightboxImg" />
+          <button class="lightbox-btn next" id="lightboxNext">&#8250;</button>
+        </div>
       </div>
     </main>
 

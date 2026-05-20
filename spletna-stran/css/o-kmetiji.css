@@ -2,48 +2,75 @@
    O KMETIJI - mobile first
 =========================== */
 
-/* Slika z overlay besedilom */
-.slika-overlay {
-  position: relative;
-  width: 100%;
+.ok-vsebina {
   margin-bottom: 50px;
 }
 
-.slika-overlay img {
+.ok-opis {
+  padding: 20px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ede9df;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.ok-opis h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.ok-opis p {
+  margin-bottom: 12px;
+}
+
+/* Carousel */
+.ok-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ok-carousel-link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.ok-slide {
+  display: none;
   width: 100%;
-  height: 650px;
+  height: 280px;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.ok-slide.active {
   display: block;
 }
 
-.overlay-tekst {
+.ok-carousel-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  width: 90%;
-  max-width: 400px;
-  text-align: left;
-  border-radius: 5px;
-}
-
-.overlay-tekst h2 {
-  font-size: 30px;
-  margin-bottom: 12px;
-  t
-}
-
-.overlay-tekst p {
-  margin-bottom: 10px;
-  font-size: 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* Kje smo */
 .kje-smo {
   max-width: 600px;
-  margin: 0 auto 60px;
+  margin: 50px auto 60px;
   text-align: center;
 }
 
@@ -62,22 +89,45 @@
   border-radius: 6px;
   border: 1px solid #d4a843;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .ok-opis {
+    padding: 30px 40px;
+  }
+
+  .ok-opis h2 {
+    font-size: 28px;
+  }
+
+  .ok-slide {
+    height: 350px;
+  }
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
-  .slika-overlay img {
-    height: 750px;
+@media (min-width: 1280px) {
+  .ok-vsebina {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 50px;
   }
 
-  .overlay-tekst {
-    padding: 20px;
-    max-width: 650px;
+  .ok-opis {
+    flex: 1;
+    margin-bottom: 0;
+    align-self: flex-start;
   }
 
-  .overlay-tekst p {
-    font-size: 15px;
+  .ok-carousel {
+    flex: 0 0 45%;
+    margin-top: 55px; /* poravna z h2 naslovom */
+  }
+
+  .ok-slide {
+    height: 380px;
   }
 }

@@ -34,9 +34,20 @@
       </div>
     </header>
 
-    <section class="podstrani-hero"></section>
+    <section class="podstrani-hero">
+      <img
+        src="img/hero1000.webp"
+        srcset="
+          img/hero500.webp   500w,
+          img/hero1000.webp  750w,
+          img/hero2000.webp 1000w
+        "
+        sizes="100vw"
+        alt="Turistična kmetija Smodiš"
+      />
+    </section>
 
-    <main class="container">
+    <main class="container page-content">
       <h1 class="page-title">Ponudba</h1>
 
       <!-- 1. NASTANITEV (s carouselom) -->
@@ -44,24 +55,26 @@
         <div class="ponudba-tekst">
           <h2>Možnost nastanitve</h2>
           <p>
-            Nudimo vam prenočišče v 6 različnih sobah, kjer imamo prostor za 14
-            ležišč.
+            Nudimo vam prenočišče v 6 različnih sobah, kjer je na voljo skupaj
+            14 ležišč.
           </p>
           <p>
-            Vsake soba ima tudi svojo kopalnico in toaleto. Po želji lahko sobo
-            opremimo tudi s televizorjem ali dodamo še kakšno dodatno ležišče.
+            Vsaka soba ima svojo kopalnico in toaleto. Po želji lahko sobo
+            opremimo tudi s televizorjem ali dodamo dodatno ležišče.
           </p>
-          <p>Tako lahko na kmetiji prenoči 25 gostov.</p>
-          <div class="btn-wrapper">
-            <a href="cenik.html" class="btn-cenik">Cenik</a>
-          </div>
+          <p>Skupno lahko na kmetiji prenoči do 25 gostov.</p>
+          <p class="cenik-link">
+            <a href="cenik.html">Oglej si cenik nočitev</a>
+          </p>
         </div>
         <div class="ponudba-slika">
           <div class="carousel">
             <div class="carousel-track">
-              <img src="img/1.jpg" alt="Soba 1" />
-              <img src="img/1.jpg" alt="Soba 2" />
-              <img src="img/1.jpg" alt="Soba 3" />
+              <img src="img/24.jpg" alt="Soba 1" />
+              <img src="img/26.jpg" alt="Soba 2" />
+              <img src="img/25.jpg" alt="Soba 3" />
+              <img src="img/27.jpg" alt="Soba 4" />
+              <img src="img/28.jpg" alt="Soba 5" />
             </div>
             <button class="carousel-btn prev" aria-label="Prejšnja">
               &#8249;
@@ -73,24 +86,41 @@
               <span class="dot active"></span>
               <span class="dot"></span>
               <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
             </div>
           </div>
         </div>
       </section>
+
+      <hr class="locilo" />
 
       <!-- 2. GOSTINSKI PROSTOR -->
       <section class="ponudba-sekcija reverse">
         <div class="ponudba-tekst">
           <h2>Večnamenski gostinski prostor</h2>
           <p>
-            Prostor lahko najamete za različna slavja, zaključne prireditve,
-            izobraževalne seminarje, degustacije in še več.
+            Ponujamo prostoren večnamenski gostinski prostor, primeren za
+            organizacijo različnih slavij, zaključnih prireditev, rojstnih dni,
+            obletnic, izobraževalnih seminarjev, degustacij, poslovnih srečanj
+            in drugih dogodkov.
           </p>
         </div>
         <div class="ponudba-slika">
-          <img src="img/1.jpg" alt="Gostinski prostor" />
+          <img
+            src="img/gostinski_prostor.jpg"
+            srcset="
+              img/gostinski_prostor-small.jpg 400w,
+              img/gostinski_prostor.jpg       700w
+            "
+            sizes="(max-width: 768px) 100vw, 40vw"
+            loading="lazy"
+            alt="Gostinski prostor"
+          />
         </div>
       </section>
+
+      <hr class="locilo" />
 
       <!-- 3. KULINARIKA -->
       <section class="ponudba-sekcija">
@@ -108,9 +138,17 @@
           <p>Med drugim lahko poskusite tudi naše domače vino ali žganje.</p>
         </div>
         <div class="ponudba-slika">
-          <img src="img/1.jpg" alt="Kulinarika" />
+          <img
+            src="img/kulinarika.jpg"
+            srcset="img/kulinarika-small.jpg 400w, img/kulinarika.jpg 700w"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            loading="lazy"
+            alt="Kulinarika"
+          />
         </div>
       </section>
+
+      <hr class="locilo" />
 
       <!-- 4. AKTIVNOSTI -->
       <section class="ponudba-sekcija reverse">
@@ -118,19 +156,26 @@
           <h2>Možnost za razne aktivnosti</h2>
           <p>
             Okolica ponuja bogate možnosti za kolesarjenje, treking, sprostitev
-            ali počitek, tudi pomoč pri opravilih na kmetiji.
+            v naravi ali miren počitek, prav tako pa tudi pomoč pri različnih
+            opravilih na kmetiji.
           </p>
           <p>
-            V fazi posodobitve imamo tudi novo fitnes sobo ter savno, ki je še v
-            izgradnji.
+            V fazi posodobitve imamo tudi novo fitnes sobo ter savno, ki je
+            trenutno še v izgradnji.
           </p>
           <p>
-            Imamo tudi možnost izposoje koles (2x moški kolesi in 2x žensko
-            kolo).
+            Na voljo je tudi možnost izposoje koles (2x moški kolesi in 2x
+            žensko kolo).
           </p>
         </div>
         <div class="ponudba-slika">
-          <img src="img/1.jpg" alt="Aktivnosti" />
+          <img
+            src="img/aktivnosti.jpg"
+            srcset="img/aktivnosti-small.jpg 400w, img/aktivnosti.jpg 700w"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            loading="lazy"
+            alt="Aktivnosti"
+          />
         </div>
       </section>
     </main>
