@@ -1,6 +1,7 @@
-/* ===========================
-   CENIK
-=========================== */
+.price-layout hr {
+  max-width: 600px;
+  margin: 30px auto;
+}
 
 .price-table {
   width: 100%;
@@ -9,7 +10,6 @@
   border-collapse: collapse;
   background: #fff;
   border-radius: 8px;
-  overflow: hidden;
   font-weight: bold;
 }
 
@@ -26,34 +26,34 @@
   border-bottom: 1px solid #eee;
 }
 
-.price-table tr:hover {
-  background: #f9f9f9;
+.price-table th:nth-child(2),
+.price-table td:nth-child(2) {
+  width: 50%;
+  text-align: center;
 }
 
 .price-note {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 10px auto;
   text-align: center;
   font-weight: bold;
 }
 
-.price-note p {
-  margin-bottom: 10px;
+.price-note .btn-primary {
+  margin-top: 18px;
 }
 
-.btn-cenik {
-  display: inline-block;
-  background: #b68c3d;
-  color: #fff;
-  border: 2px solid #b68c3d;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-top: 15px;
-  text-decoration: none;
-  transition: 0.3s;
+.popusti {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
 }
 
-.btn-cenik:hover {
-  background: transparent;
-  color: #35603e;
+.popusti-naslov {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.popusti p {
+  margin-bottom: 8px;
 }

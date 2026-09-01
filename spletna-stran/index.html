@@ -45,8 +45,8 @@
         src="img/hero1000.webp"
         srcset="
           img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero1000.webp 1000w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
@@ -58,61 +58,202 @@
         <h1>Dobrodošli na kmetiji Smodiš</h1>
         <p>Mir, narava in domačnost v osrčju Goričkega.</p>
       </div>
+
+      <a
+        href="#zacetna-vsebina"
+        class="scroll-down"
+        aria-label="Pomakni se do vsebine"
+      >
+        <span class="scroll-down-text">Odkrijte več</span>
+        <i class="fa-solid fa-angles-down" aria-hidden="true"></i>
+      </a>
     </section>
 
-    <main>
-      <section class="intro">
-        <div class="container grid-2">
-          <div>
-            <h2>Prava domača izkušnja</h2>
-            <p>
-              Pri Smodiševih vas pričaka pristen stik z naravo, lokalna hrana in
-              toplo družinsko vzdušje. Uživali boste v domačih dobrotah,
-              neokrnjeni pokrajini in prijetnih dejavnostih za vse generacije.
-            </p>
+    <main id="zacetna-vsebina" class="container page-content home-content">
+      <!-- Glavni deli ponudbe -->
+      <section class="home-offer" aria-label="Ponudba">
+        <div class="home-offer-grid">
+          <a href="ponudba.html#nastanitev" class="home-offer-link">
+            <img
+              src="img/24.jpg"
+              loading="lazy"
+              alt="Udobno urejena soba na turistični kmetiji"
+            />
+            <span>Nastanitev</span>
+          </a>
+
+          <a href="ponudba.html#gostinski-prostor" class="home-offer-link">
+            <img
+              src="img/gostinski_prostor.jpg"
+              loading="lazy"
+              alt="Večnamenski gostinski prostor"
+            />
+            <span>Večnamenski prostor</span>
+          </a>
+
+          <a href="ponudba.html#kulinarika" class="home-offer-link">
+            <img
+              src="img/kulinarika.jpg"
+              loading="lazy"
+              alt="Domača prekmurska kulinarika"
+            />
+            <span>Domača kulinarika</span>
+          </a>
+
+          <a href="ponudba.html#aktivnosti" class="home-offer-link">
+            <img
+              src="img/aktivnosti.jpg"
+              loading="lazy"
+              alt="Aktivnosti v naravi na Goričkem"
+            />
+            <span>Aktivnosti in sprostitev</span>
+          </a>
+        </div>
+      </section>
+
+      <hr class="home-divider" />
+
+      <section class="home-about">
+        <div class="home-about-text">
+          <h2>Doživite pristno domačnost in mir v osrčju Goričkega</h2>
+
+          <p>
+            Turistična kmetija Smodiš se nahaja v mirni prekmurski vasici
+            Otovci, obdani z neokrnjeno naravo Goričkega. Okolica ponuja
+            številne možnosti za sprehode, kolesarjenje in sprostitev v naravi.
+          </p>
+
+          <p>
+            Gostom ponujamo udobne nastanitve, domačo kulinariko in različne
+            možnosti preživljanja prostega časa. Po predhodnem dogovoru
+            pripravljamo domače narezke, prekmurske specialitete in druge jedi,
+            organiziramo pa lahko tudi piknike, praznovanja ter degustacije
+            goričkih vin in žganih pijač.
+          </p>
+        </div>
+
+        <div class="home-features-grid">
+          <div class="home-feature">
+            <i class="fa-solid fa-bed" aria-hidden="true"></i>
+            <strong>6 sob</strong>
+            <span>14 osnovnih ležišč</span>
           </div>
-          <div>
-            <img src="img/kmetija.webp" alt="Turistična kmetija Smodiš" />
+
+          <div class="home-feature">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <strong>Do 25 gostov</strong>
+            <span>Z možnostjo dodatnih ležišč</span>
+          </div>
+
+          <div class="home-feature">
+            <i class="fa-solid fa-shower" aria-hidden="true"></i>
+            <strong>Lastne kopalnice</strong>
+            <span>V vsaki sobi</span>
+          </div>
+
+          <div class="home-feature">
+            <i class="fa-solid fa-bicycle" aria-hidden="true"></i>
+            <strong>Izposoja koles</strong>
+            <span>Za raziskovanje okolice</span>
+          </div>
+
+          <div class="home-feature">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            <strong>Domača kulinarika</strong>
+            <span>Po predhodnem dogovoru</span>
+          </div>
+
+          <div class="home-feature">
+            <i class="fa-solid fa-tree" aria-hidden="true"></i>
+            <strong>Narava Goričkega</strong>
+            <span>Sprehodi in sprostitev</span>
           </div>
         </div>
+      </section>
+
+      <hr class="home-divider" />
+
+      <!-- Predogled galerije -->
+      <section class="home-contact-cta">
+        <h2>Načrtujete oddih na Goričkem?</h2>
+
+        <p>
+          Za informacije o nastanitvah, cenah in razpoložljivih terminih nam
+          pošljite povpraševanje. Z veseljem vam bomo pomagali pri načrtovanju
+          obiska.
+        </p>
+
+        <a href="kontakt.html#povprasevanje" class="btn-primary">
+          Pošljite povpraševanje
+        </a>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
         <h2>Turistična kmetija Smodiš</h2>
+
         <p class="footer-slogan">
           Mir, narava in domačnost v osrčju Goričkega.
         </p>
 
-        <div class="footer-contact">
-          <h3>Kontakt</h3>
-          <p>Otovci 58a</p>
-          <p>9202 Mačkovci</p>
-          <p>Tel: 02 551 60 50</p>
-          <p>E-pošta: tksmodis@gmail.com</p>
+        <div class="footer-details">
+          <!-- Naslov -->
+          <div class="footer-column">
+            <h3>Naslov</h3>
+            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <p>Otovci 58a</p>
+            <p>9202 Mačkovci</p>
+          </div>
+
+          <!-- Kontakt -->
+          <div class="footer-column">
+            <h3>Kontakt</h3>
+            <p>Telefon: 02 551 60 50</p>
+            <p>E-pošta: tksmodis@gmail.com</p>
+
+            <div class="footer-icons">
+              <a href="tel:+38625516050" aria-label="Pokličite nas">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="mailto:tksmodis@gmail.com"
+                aria-label="Pošljite nam e-pošto"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Turistična+kmetija+Smodiš+Otovci+58a+Mačkovci"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Prikažite lokacijo"
+              >
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigacija -->
+          <nav
+            class="footer-column footer-navigation"
+            aria-label="Navigacija v nogi strani"
+          >
+            <ul>
+              <li><a href="index.html">Domov</a></li>
+              <li><a href="o-kmetiji.html">O kmetiji</a></li>
+              <li><a href="ponudba.html">Ponudba</a></li>
+              <li><a href="cenik.html">Cenik</a></li>
+              <li><a href="galerija.html">Galerija</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
 
-      <div class="footer-icons">
-        <a href="tel:+38625516050" aria-label="Telefon">
-          <i class="fas fa-phone"></i>
-        </a>
-        <a href="mailto:tksmodis@gmail.com" aria-label="E-pošta">
-          <i class="fas fa-envelope"></i>
-        </a>
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=Turistična+kmetija+Smodiš+Otovci+58a+Mačkovci"
-          target="_blank"
-          aria-label="Lokacija"
-        >
-          <i class="fas fa-location-dot"></i>
-        </a>
-      </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2024 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+        <p>&copy; 2026 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
       </div>
     </footer>
   </body>

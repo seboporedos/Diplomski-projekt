@@ -9,11 +9,7 @@
 .ok-opis {
   padding: 20px;
   max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #ede9df;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .ok-opis h2 {
@@ -28,12 +24,10 @@
 /* Carousel */
 .ok-carousel {
   position: relative;
+  max-width: 500px;
+  margin: 0 auto 20px;
   overflow: hidden;
   border-radius: 8px;
-  margin-bottom: 20px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .ok-carousel-link {
@@ -47,7 +41,6 @@
   width: 100%;
   height: 280px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .ok-slide.active {
@@ -111,20 +104,18 @@
 @media (min-width: 1280px) {
   .ok-vsebina {
     display: flex;
-    gap: 40px;
     align-items: flex-start;
-    margin-bottom: 50px;
+    gap: 40px;
   }
 
   .ok-opis {
     flex: 1;
     margin-bottom: 0;
-    align-self: flex-start;
   }
 
   .ok-carousel {
     flex: 0 0 45%;
-    margin-top: 55px; /* poravna z h2 naslovom */
+    margin-top: 55px;
   }
 
   .ok-slide {

@@ -1,0 +1,196 @@
+/* ===========================
+   KONTAKT - mobile first
+=========================== */
+
+.kontakt-sekcija {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* Kontaktni podatki */
+.kontakt-info {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kontakt-info a {
+  color: #b68c3d;
+  text-decoration: none;
+}
+
+.kontakt-info a:hover {
+  opacity: 0.7;
+}
+
+.kontakt-info p {
+  margin-bottom: 8px;
+}
+
+.kontakt-obrazec h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Obrazec */
+.obrazec-polje {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.obrazec-polje label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.obrazec-polje input,
+.obrazec-polje textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  background: #faf9f5;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.obrazec-polje input:focus,
+.obrazec-polje textarea:focus {
+  outline: none;
+  border-color: #b68c3d;
+}
+
+.obrazec-polje input.napaka-input,
+.obrazec-polje textarea.napaka-input {
+  border-color: #c0392b;
+}
+
+.napaka {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.kontakt-btn {
+  width: 100%;
+}
+
+.uspeh {
+  text-align: center;
+  color: #2d5235;
+  font-weight: bold;
+  margin-top: 20px;
+  min-height: 24px;
+}
+
+/* Lokacija */
+.kontakt-lokacija {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.kontakt-lokacija h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mapa-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #d4a843;
+}
+
+.mapa-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.delovni-cas {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.delovni-cas-naslov {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.delovni-cas-tabela {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.delovni-cas-tabela td {
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.delovni-cas-tabela td:first-child {
+  text-align: center;
+  color: #444;
+}
+
+.delovni-cas-tabela td:last-child {
+  font-weight: bold;
+  text-align: left;
+}
+
+.delovni-cas-opomba {
+  margin-top: 12px;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .kontakt-btn {
+    display: flex;
+    width: auto;
+    max-width: 250px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kontakt-sekcija {
+    max-width: 900px;
+  }
+
+  .kontakt-zgornji-del {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+
+  .kontakt-notranje-locilo {
+    display: none;
+  }
+
+  .kontakt-info {
+    margin-bottom: 0;
+    padding: 10px 50px 10px 20px;
+    text-align: center;
+  }
+
+  .delovni-cas {
+    margin: 0;
+    padding: 10px 20px 10px 50px;
+  }
+}

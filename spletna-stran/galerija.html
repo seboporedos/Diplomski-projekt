@@ -16,10 +16,8 @@
   </head>
 
   <body>
-    <!-- scroll gumb -->
     <button id="scrollTopBtn" aria-label="Na vrh">↑</button>
 
-    <!-- header -->
     <header class="header">
       <div class="container header-content">
         <a href="index.html" class="logo">Turistična kmetija Smodiš</a>
@@ -52,7 +50,6 @@
       />
     </section>
 
-    <!-- vsebina -->
     <main class="container page-content">
       <h1 class="page-title">Galerija</h1>
 
@@ -87,22 +84,37 @@
         <img data-src="img/28.jpg" loading="lazy" alt="Galerija 28" />
         <img data-src="img/29.jpg" loading="lazy" alt="Galerija 29" />
         <img data-src="img/30.jpg" loading="lazy" alt="Galerija 30" />
-
-        <!-- dodaj do 30 slik -->
       </div>
 
       <!-- Lightbox -->
       <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button
+          class="lightbox-close"
+          id="lightboxClose"
+          aria-label="Zapri povečano sliko"
+        >
+          ✕
+        </button>
         <div class="lightbox-wrapper">
-          <button class="lightbox-btn prev" id="lightboxPrev">&#8249;</button>
+          <button
+            class="lightbox-btn prev"
+            id="lightboxPrev"
+            aria-label="Prejšnja slika"
+          >
+            &#8249;
+          </button>
           <img src="" alt="" id="lightboxImg" />
-          <button class="lightbox-btn next" id="lightboxNext">&#8250;</button>
+          <button
+            class="lightbox-btn next"
+            id="lightboxNext"
+            aria-label="Naslednja slika"
+          >
+            &#8250;
+          </button>
         </div>
       </div>
     </main>
 
-    <!-- footer -->
     <footer class="site-footer">
       <div class="container footer-content">
         <h2>Turistična kmetija Smodiš</h2>
@@ -111,36 +123,63 @@
           Mir, narava in domačnost v osrčju Goričkega.
         </p>
 
-        <div class="footer-contact">
-          <h3>Kontakt</h3>
-          <p>Otovci 58a</p>
-          <p>9202 Mačkovci</p>
-          <p>Tel: 02 551 60 50</p>
-          <p>E-pošta: tksmodis@gmail.com</p>
+        <div class="footer-details">
+          <!-- Naslov -->
+          <div class="footer-column">
+            <h3>Naslov</h3>
+            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <p>Otovci 58a</p>
+            <p>9202 Mačkovci</p>
+          </div>
+
+          <!-- Kontakt -->
+          <div class="footer-column">
+            <h3>Kontakt</h3>
+            <p>Telefon: 02 551 60 50</p>
+            <p>E-pošta: tksmodis@gmail.com</p>
+
+            <div class="footer-icons">
+              <a href="tel:+38625516050" aria-label="Pokličite nas">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="mailto:tksmodis@gmail.com"
+                aria-label="Pošljite nam e-pošto"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Turistična+kmetija+Smodiš+Otovci+58a+Mačkovci"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Prikažite lokacijo"
+              >
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigacija -->
+          <nav
+            class="footer-column footer-navigation"
+            aria-label="Navigacija v nogi strani"
+          >
+            <ul>
+              <li><a href="index.html">Domov</a></li>
+              <li><a href="o-kmetiji.html">O kmetiji</a></li>
+              <li><a href="ponudba.html">Ponudba</a></li>
+              <li><a href="cenik.html">Cenik</a></li>
+              <li><a href="galerija.html">Galerija</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
 
-      <div class="footer-icons">
-        <a href="tel:+38625516050" aria-label="Telefon">
-          <i class="fas fa-phone"></i>
-        </a>
-
-        <a href="mailto:tksmodis@gmail.com" aria-label="E-pošta">
-          <i class="fas fa-envelope"></i>
-        </a>
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=Turistična+kmetija+Smodiš+Otovci+58a+Mačkovci"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Lokacija"
-        >
-          <i class="fas fa-location-dot"></i>
-        </a>
-      </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2024 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+        <p>&copy; 2026 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
       </div>
     </footer>
   </body>

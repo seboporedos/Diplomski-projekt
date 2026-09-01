@@ -10,6 +10,7 @@
   margin-bottom: 15px;
   padding: 20px;
   padding-bottom: 20px;
+  scroll-margin-top: 100px;
 }
 
 .ponudba-sekcija:last-of-type {
@@ -31,24 +32,9 @@
   margin-bottom: 5px;
 }
 
-.cenik-link {
-  margin-top: 15px;
-}
-
-.cenik-link a {
-  color: #b48e1f;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid #b48e1f;
-  padding: 8px 16px;
-  border-radius: 4px;
-  display: inline-block;
-  transition: opacity 0.3s;
-}
-
-.cenik-link a:hover {
-  opacity: 0.7;
+.ponudba-gumb {
+  margin-top: 20px;
+  text-align: left;
 }
 
 /* ===========================
@@ -110,19 +96,16 @@
   background: #b48e1f;
 }
 
-/* ===========================
-   DESKTOP - izmenjevanje levo/desno
-=========================== */
 @media (min-width: 768px) {
   .ponudba-sekcija {
     flex-direction: row;
-    align-items: top;
+    align-items: center;
     margin-top: 25px;
     gap: 20px;
   }
 
   .ponudba-slika {
-    flex: 0 0 40%; /* namesto flex: 1 — slika zavzame 40% širine */
+    flex: 0 0 40%;
   }
 
   .ponudba-tekst {
@@ -132,23 +115,4 @@
   .ponudba-tekst h2 {
     font-size: 35px;
   }
-}
-
-.btn-cenik {
-  display: inline-block;
-  background: #b48e1f;
-  color: #fff;
-  border: 2px solid #b48e1f;
-  padding: 14px 35px;
-  border-radius: 4px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-size: 18px;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.btn-cenik:hover {
-  background: transparent;
-  color: #b48e1f;
 }
