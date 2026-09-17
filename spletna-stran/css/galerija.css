@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .galerija-grid img {
@@ -75,6 +75,44 @@
 }
 .lightbox-btn.next {
   right: 5px;
+}
+
+/* Filter galerije */
+.galerija-filter {
+  margin-bottom: 25px;
+}
+
+.galerija-filter label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#filterGalerija {
+  width: 100%;
+  max-width: 210px;
+  min-height: 30px;
+  padding: 10px 10px;
+  border: 2px solid #b68c3d;
+  border-radius: 4px;
+  background: #f8f2e2;
+  color: #2b2b2b;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#filterGalerija:focus,
+#filterGalerija:focus-visible {
+  border-color: #b68c3d;
+  outline: 2px solid #3f4f28;
+  outline-offset: 2px;
+}
+
+.galerija-grid img:focus-visible {
+  outline: 3px solid #b68c3d;
+  outline-offset: 1px;
 }
 
 @media (min-width: 1024px) {

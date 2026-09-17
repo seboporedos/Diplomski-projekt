@@ -3,15 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>Ponudba | Turistična kmetija Smodiš</title>
+    <meta
+      name="description"
+      content="Oglejte si raznoliko ponudbo na Turistični kmetiji Smodiš."
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/ponudba.css" />
-    <script defer src="js/main.js"></script>
-    <script defer src="js/ponudba.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/ponudba.js"></script>
   </head>
 
   <body>
@@ -36,14 +51,15 @@
 
     <section class="podstrani-hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
+        fetchpriority="high"
       />
     </section>
 
@@ -55,14 +71,18 @@
         <div class="ponudba-tekst">
           <h2>Možnost nastanitve</h2>
           <p>
-            Nudimo vam prenočišče v 6 različnih sobah, kjer je na voljo skupaj
-            14 ležišč.
+            Gostom je na voljo šest udobno opremljenih sob s skupno 14 ležišči.
           </p>
+
           <p>
-            Vsaka soba ima svojo kopalnico in toaleto. Po želji lahko sobo
-            opremimo tudi s televizorjem ali dodamo dodatno ležišče.
+            Vsaka soba ima lastno kopalnico in toaleto, po želji pa jo lahko
+            opremimo tudi s televizorjem ter pripravimo dodatno ležišče.
           </p>
-          <p>Skupno lahko na kmetiji prenoči do 25 gostov.</p>
+
+          <p>
+            Z dodatnimi ležišči lahko na kmetiji prenoči do 25 gostov, zato je
+            nastanitev primerna tudi za družine in manjše skupine.
+          </p>
           <div class="ponudba-gumb">
             <a href="cenik.html" class="btn-primary">
               Oglejte si cenik nočitev
@@ -72,21 +92,67 @@
         <div class="ponudba-slika">
           <div class="carousel">
             <div class="carousel-track">
-              <img src="img/24.jpg" alt="Soba 1" />
-              <img src="img/26.jpg" alt="Soba 2" />
-              <img src="img/25.jpg" alt="Soba 3" />
-              <img src="img/27.jpg" alt="Soba 4" />
-              <img src="img/28.jpg" alt="Soba 5" />
+              <img
+                src="img/nastanitev-1.jpg"
+                srcset="
+                  img/nastanitev-1-small.jpg 400w,
+                  img/nastanitev-1.jpg       700w
+                "
+                sizes="(max-width: 767px) 70vw, 40vw"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Prikaz sobe 1"
+              />
+
+              <img
+                src="img/nastanitev-2.jpg"
+                srcset="
+                  img/nastanitev-2-small.jpg 400w,
+                  img/nastanitev-2.jpg       700w
+                "
+                sizes="(max-width: 767px) 70vw, 40vw"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Prikaz sobe 2"
+              />
+
+              <img
+                src="img/nastanitev-3.jpg"
+                srcset="
+                  img/nastanitev-3-small.jpg 400w,
+                  img/nastanitev-3.jpg       700w
+                "
+                sizes="(max-width: 767px) 70vw, 40vw"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Prikaz sobe 3"
+              />
+
+              <img
+                src="img/nastanitev-4.jpg"
+                srcset="
+                  img/nastanitev-4-small.jpg 400w,
+                  img/nastanitev-4.jpg       700w
+                "
+                sizes="(max-width: 767px) 70vw, 40vw"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Prikaz sobe 4"
+              />
             </div>
             <button class="carousel-btn prev" aria-label="Prejšnja">
-              &#8249;
+              <span aria-hidden="true">‹</span>
             </button>
+
             <button class="carousel-btn next" aria-label="Naslednja">
-              &#8250;
+              <span aria-hidden="true">›</span>
             </button>
             <div class="carousel-dots">
               <span class="dot active"></span>
-              <span class="dot"></span>
               <span class="dot"></span>
               <span class="dot"></span>
               <span class="dot"></span>
@@ -107,15 +173,18 @@
             obletnic, izobraževalnih seminarjev, degustacij, poslovnih srečanj
             in drugih dogodkov.
           </p>
+
+          <p>
+            Prostor je na voljo za najem po predhodnem dogovoru. Za dodatne
+            informacije o razpoložljivosti in možnostih organizacije dogodka nas
+            kontaktirajte.
+          </p>
         </div>
         <div class="ponudba-slika">
           <img
-            src="img/gostinski_prostor.jpg"
-            srcset="
-              img/gostinski_prostor-small.jpg 400w,
-              img/gostinski_prostor.jpg       700w
-            "
-            sizes="(max-width: 768px) 100vw, 40vw"
+            src="img/ponudba-1.jpg"
+            srcset="img/ponudba-1-small.jpg 400w, img/ponudba-1.jpg 700w"
+            sizes="(max-width: 768px) 70vw, 40vw"
             loading="lazy"
             alt="Gostinski prostor"
           />
@@ -141,9 +210,9 @@
         </div>
         <div class="ponudba-slika">
           <img
-            src="img/kulinarika.jpg"
-            srcset="img/kulinarika-small.jpg 400w, img/kulinarika.jpg 700w"
-            sizes="(max-width: 768px) 100vw, 40vw"
+            src="img/ponudba-4.jpg"
+            srcset="img/ponudba-4-small.jpg 400w, img/ponudba-4.jpg 700w"
+            sizes="(max-width: 768px) 70vw, 40vw"
             loading="lazy"
             alt="Kulinarika"
           />
@@ -162,8 +231,8 @@
             opravilih na kmetiji.
           </p>
           <p>
-            V fazi posodobitve imamo tudi novo fitnes sobo ter savno, ki je
-            trenutno še v izgradnji.
+            Za goste, ki želijo svoj oddih dopolniti z vadbo ali sprostitvijo,
+            sta na voljo tudi fitnes soba in savna.
           </p>
           <p>
             Na voljo je tudi možnost izposoje koles (2x moški kolesi in 2x
@@ -172,9 +241,9 @@
         </div>
         <div class="ponudba-slika">
           <img
-            src="img/aktivnosti.jpg"
-            srcset="img/aktivnosti-small.jpg 400w, img/aktivnosti.jpg 700w"
-            sizes="(max-width: 768px) 100vw, 40vw"
+            src="img/kmetija-12.jpg"
+            srcset="img/kmetija-12-small.jpg 400w, img/kmetija-12.jpg 700w"
+            sizes="(max-width: 768px) 70vw, 40vw"
             loading="lazy"
             alt="Aktivnosti"
           />
@@ -184,17 +253,10 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

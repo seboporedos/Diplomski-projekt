@@ -3,14 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>Kontakt | Turistična kmetija Smodiš</title>
+    <meta
+      name="description"
+      content="Kontaktirajte Turistično kmetijo Smodiš in pošljite povpraševanje"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/kontakt.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/kontakt.js"></script>
   </head>
 
   <body>
@@ -35,14 +54,15 @@
 
     <section class="podstrani-hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
+        fetchpriority="high"
       />
     </section>
 
@@ -95,25 +115,54 @@
         <hr class="locilo" />
 
         <!-- Desno: obrazec -->
-        <div class="kontakt-obrazec">
+        <div class="kontakt-obrazec" id="povprasevanje">
           <h2>Pišite nam!</h2>
 
           <form class="contact-form" id="contactForm" novalidate>
             <div class="obrazec-polje">
               <label for="name">Ime in priimek</label>
-              <input type="text" id="name" placeholder="Vaše ime in priimek" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Vaše ime in priimek"
+                autocomplete="name"
+                minlength="2"
+                maxlength="60"
+                aria-describedby="nameNapaka"
+                required
+              />
               <span class="napaka" id="nameNapaka"></span>
             </div>
 
             <div class="obrazec-polje">
               <label for="email">E-pošta</label>
-              <input type="email" id="email" placeholder="vas@email.com" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="vas@email.com"
+                autocomplete="email"
+                maxlength="100"
+                aria-describedby="emailNapaka"
+                required
+              />
               <span class="napaka" id="emailNapaka"></span>
             </div>
 
             <div class="obrazec-polje">
               <label for="zadeva">Zadeva</label>
-              <input type="text" id="zadeva" placeholder="Zadeva sporočila" />
+              <input
+                type="text"
+                id="zadeva"
+                name="zadeva"
+                placeholder="Zadeva"
+                minlength="3"
+                maxlength="100"
+                aria-describedby="zadevaNapaka"
+                autocomplete="off"
+                required
+              />
               <span class="napaka" id="zadevaNapaka"></span>
             </div>
 
@@ -121,8 +170,13 @@
               <label for="message">Sporočilo</label>
               <textarea
                 id="message"
+                name="message"
                 rows="5"
                 placeholder="Vaše sporočilo..."
+                minlength="10"
+                maxlength="1000"
+                aria-describedby="messageNapaka"
+                required
               ></textarea>
               <span class="napaka" id="messageNapaka"></span>
             </div>
@@ -130,7 +184,12 @@
             <button type="submit" class="btn-primary kontakt-btn">
               Pošlji sporočilo
             </button>
-            <p class="uspeh" id="uspehSporocilo"></p>
+            <p
+              class="uspeh"
+              id="uspehSporocilo"
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
         </div>
         <hr class="locilo" />
@@ -138,6 +197,13 @@
 
       <section class="kontakt-lokacija">
         <h2>Lokacija</h2>
+
+        <p class="lokacija-opis">
+          Nahajamo se v vasi Otovci, približno 200 metrov od vasi Mačkovci. V
+          Mačkovcih sledite smerokazu za Otovce. V Mačkovcih je tudi železniška
+          postaja, od koder vam po predhodnem dogovoru omogočimo prevoz do naše
+          kmetije.
+        </p>
 
         <div class="mapa-container">
           <iframe
@@ -152,17 +218,10 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

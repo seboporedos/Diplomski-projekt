@@ -14,7 +14,7 @@
 }
 
 .kontakt-info a {
-  color: #b68c3d;
+  color: #87631f;
   text-decoration: none;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .kontakt-obrazec h2 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -53,9 +53,11 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
-  font-family: Arial, sans-serif;
   background: #faf9f5;
   transition: border-color 0.3s;
+}
+
+.obrazec-polje textarea {
   resize: vertical;
 }
 
@@ -67,11 +69,11 @@
 
 .obrazec-polje input.napaka-input,
 .obrazec-polje textarea.napaka-input {
-  border-color: #c0392b;
+  border-color: #b68c3d;
 }
 
 .napaka {
-  color: #c0392b;
+  color: #7d5c16;
   font-size: 13px;
   margin-top: 4px;
   min-height: 18px;
@@ -89,16 +91,25 @@
   min-height: 24px;
 }
 
+.uspeh:not(:empty) {
+  margin-bottom: 25px;
+}
+
 /* Lokacija */
 .kontakt-lokacija {
-  max-width: 900px;
   margin: 0 auto 40px;
 }
 
 .kontakt-lokacija h2 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.lokacija-opis {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  text-align: center;
 }
 
 .mapa-container {

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>Galerija | Turistična kmetija Smodiš</title>
+    <meta
+      name="description"
+      content="Oglejte si fotografije Turistične kmetije Smodiš."
+    />
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/galerija.css" />
@@ -12,7 +17,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="js/main.js"></script>
+    <script defer src="js/galerija.js"></script>
   </head>
 
   <body>
@@ -39,51 +53,307 @@
 
     <section class="podstrani-hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
+        fetchpriority="high"
       />
     </section>
 
     <main class="container page-content">
       <h1 class="page-title">Galerija</h1>
 
+      <div class="galerija-filter">
+        <label for="filterGalerija">Prikaži fotografije:</label>
+
+        <select id="filterGalerija">
+          <option value="vse" selected>Vse</option>
+          <option value="kmetija">Kmetija in okolica</option>
+          <option value="nastanitev">Nastanitev</option>
+          <option value="ponudba">Ostala ponudba</option>
+          <option value="zivali">Živali</option>
+        </select>
+      </div>
+
       <div class="galerija-grid">
-        <img data-src="img/1.jpg" loading="lazy" alt="Galerija 1" />
-        <img data-src="img/2.jpg" loading="lazy" alt="Galerija 2" />
-        <img data-src="img/3.jpg" loading="lazy" alt="Galerija 3" />
-        <img data-src="img/4.jpg" loading="lazy" alt="Galerija 4" />
-        <img data-src="img/5.jpg" loading="lazy" alt="Galerija 5" />
-        <img data-src="img/6.jpg" loading="lazy" alt="Galerija 6" />
-        <img data-src="img/7.jpg" loading="lazy" alt="Galerija 7" />
-        <img data-src="img/8.jpg" loading="lazy" alt="Galerija 8" />
-        <img data-src="img/9.jpg" loading="lazy" alt="Galerija 9" />
-        <img data-src="img/10.jpg" loading="lazy" alt="Galerija 10" />
-        <img data-src="img/11.jpg" loading="lazy" alt="Galerija 11" />
-        <img data-src="img/12.jpg" loading="lazy" alt="Galerija 12" />
-        <img data-src="img/13.jpg" loading="lazy" alt="Galerija 13" />
-        <img data-src="img/14.jpg" loading="lazy" alt="Galerija 14" />
-        <img data-src="img/15.jpg" loading="lazy" alt="Galerija 15" />
-        <img data-src="img/16.jpg" loading="lazy" alt="Galerija 16" />
-        <img data-src="img/17.jpg" loading="lazy" alt="Galerija 17" />
-        <img data-src="img/18.jpg" loading="lazy" alt="Galerija 18" />
-        <img data-src="img/19.jpg" loading="lazy" alt="Galerija 19" />
-        <img data-src="img/20.jpg" loading="lazy" alt="Galerija 20" />
-        <img data-src="img/21.jpg" loading="lazy" alt="Galerija 21" />
-        <img data-src="img/22.jpg" loading="lazy" alt="Galerija 22" />
-        <img data-src="img/23.jpg" loading="lazy" alt="Galerija 23" />
-        <img data-src="img/24.jpg" loading="lazy" alt="Galerija 24" />
-        <img data-src="img/25.jpg" loading="lazy" alt="Galerija 25" />
-        <img data-src="img/26.jpg" loading="lazy" alt="Galerija 26" />
-        <img data-src="img/27.jpg" loading="lazy" alt="Galerija 27" />
-        <img data-src="img/28.jpg" loading="lazy" alt="Galerija 28" />
-        <img data-src="img/29.jpg" loading="lazy" alt="Galerija 29" />
-        <img data-src="img/30.jpg" loading="lazy" alt="Galerija 30" />
+        <!-- Kmetija in okolica -->
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-1.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-2.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-3.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-4.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-5.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-6.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-7.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-8.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-9.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-10.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-11.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="kmetija"
+          data-src="img/kmetija-12.jpg"
+          loading="lazy"
+          alt="Kmetija, okolica in aktivnosti v naravi"
+        />
+
+        <!-- Nastanitev -->
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-1.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-2.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-3.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-4.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-5.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="nastanitev"
+          data-src="img/nastanitev-6.jpg"
+          loading="lazy"
+          alt="nastannitev na turistični kmetiji"
+        />
+
+        <!-- Ostala ponudba -->
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-1.jpg"
+          loading="lazy"
+          alt="večnamenski prostor na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-2.jpg"
+          loading="lazy"
+          alt="večnamenski prostor na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-3.jpg"
+          loading="lazy"
+          alt="večnamenski prostor na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-4.jpg"
+          loading="lazy"
+          alt="Kulinarika na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-5.jpg"
+          loading="lazy"
+          alt="Kulinarika na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="ponudba"
+          data-src="img/ponudba-6.jpg"
+          loading="lazy"
+          alt="Fitnes oprema na turistični kmetiji"
+        />
+
+        <!-- Živali -->
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-1.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-2.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-3.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-4.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-5.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
+
+        <img
+          width="700"
+          height="525"
+          data-category="zivali"
+          data-src="img/zivali-6.jpg"
+          loading="lazy"
+          alt="Živali na turistični kmetiji"
+        />
       </div>
 
       <!-- Lightbox -->
@@ -117,17 +387,10 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

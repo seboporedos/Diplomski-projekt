@@ -9,11 +9,11 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f5f2ea;
   color: #2b2b2b;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* CONTAINER */
@@ -39,6 +39,49 @@ body {
   width: 100%;
   margin: 0 auto 25px;
   border-radius: 5px;
+}
+
+.page-title {
+  color: #1f1f1f;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin: 30px auto 20px;
+  border-bottom: 4px solid #d2b15a;
+  padding-bottom: 5px;
+  max-width: 350px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid #8a681f;
+  border-radius: 4px;
+  background: #8a681f;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  border-color: #6f5218;
+  background: #6f5218;
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid #3f4f28;
+  outline-offset: 3px;
 }
 
 /* HEADER */
@@ -98,11 +141,9 @@ body {
 }
 
 .main-nav ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
 .main-nav li {
@@ -131,7 +172,7 @@ body {
   align-items: flex-start;
   padding-top: 100px;
   overflow: hidden;
-  color: white;
+  color: #fff;
 }
 
 .hero-bg-img {
@@ -157,20 +198,15 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.2) 35%,
-    rgba(0, 0, 0, 0.05) 70%,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 35%,
+    rgba(0, 0, 0, 0.1) 70%,
     rgba(0, 0, 0, 0) 100%
   );
 }
 
-.hero .container {
-  position: relative;
-}
-
 .hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
+  font-size: 35px;
   letter-spacing: 0.5px;
 }
 
@@ -213,7 +249,7 @@ body {
   min-width: 110px;
   min-height: 55px;
   position: absolute;
-  bottom: 55px;
+  bottom: 75px;
   left: 50%;
   z-index: 2;
 
@@ -223,9 +259,11 @@ body {
   gap: 3px;
 
   padding: 8px 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   text-decoration: none;
-  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45);
+  text-shadow:
+    0 1px 3px #000,
+    0 0 7px rgba(0, 0, 0, 0.9);
 
   transform: translateX(-50%);
   transition: color 0.3s ease;
@@ -239,6 +277,18 @@ body {
 
 .scroll-down i {
   font-size: 31px;
+  animation: premik-puscice 1.6s ease-in-out infinite;
+}
+
+@keyframes premik-puscice {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
 }
 
 .scroll-down:hover {
@@ -252,191 +302,19 @@ body {
 }
 
 /* ===========================
-   Naslov podstrani
-=========================== */
-.page-title {
-  color: #1f1f1f;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 35px;
-  margin: 30px auto 20px;
-  border-bottom: 4px solid #d2b15a;
-  padding-bottom: 5px;
-  max-width: 350px;
-}
-
-/* ===========================
-   Button
-=========================== */
-.btn {
-  display: inline-block;
-  background: #b68c3d;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-top: 15px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #9d7732;
-}
-
-.btn-primary {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 24px;
-  border: 2px solid #8a681f;
-  border-radius: 4px;
-  background: #8a681f;
-  color: #fff;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  border-color: #6f5218;
-  background: #6f5218;
-}
-
-.btn-primary:focus-visible {
-  outline: 3px solid #3f4f28;
-  outline-offset: 3px;
-}
-
-/* ===========================
-   Grid layout
-=========================== */
-.grid-2 {
-  display: grid;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.grid-2 img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-/* ===========================
-   Footer
-=========================== */
-.site-footer {
-  background: #6f8441;
-  color: #fff;
-  margin-top: 30px;
-}
-
-.footer-content {
-  text-align: center;
-  padding: 18px 20px;
-}
-
-.footer-content h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.footer-slogan {
-  font-size: 18px;
-  margin-bottom: 35px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 18px;
-  border-top: 2px solid rgba(255, 255, 255, 0.15);
-  font-size: 14px;
-}
-
-.footer-details {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 50px;
-  padding-top: 25px;
-  border-top: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.footer-column h3 {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-
-.footer-column p {
-  margin: 6px 0;
-}
-
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 18px;
-}
-
-.footer-icons a {
-  display: flex;
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  font-size: 24px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.footer-icons a:hover {
-  background: #c9a227;
-}
-
-.footer-navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-navigation li {
-  margin-bottom: 7px;
-}
-
-.footer-navigation a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-navigation a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* ===========================
    DOMAČA STRAN
 =========================== */
 
 .home-content {
   z-index: 2;
-  margin-top: -35px;
-  padding: 45px 25px;
+  margin-top: -50px;
+  padding: 30px 25px 45px;
   scroll-margin-top: 85px;
 }
 
-/* Predstavitev in glavne značilnosti */
-
 .home-about {
   padding-top: 10px;
+  margin-bottom: 35px;
 }
 
 .home-about-text {
@@ -488,42 +366,20 @@ body {
   font-size: 14px;
 }
 
-/* Ločila med glavnimi sekcijami */
-
-.home-divider {
-  width: 100%;
-  height: 4px;
-  margin: 50px 0;
-  border: 0;
-  border-radius: 5px;
-  background: #d2b15a;
-}
-
-/* Naslovi sekcij */
-
-.home-section-heading {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-
-.home-section-heading h2 {
-  margin-bottom: 12px;
-  font-size: 30px;
-}
-
-.home-section-heading > p:last-child {
-  color: #555;
-}
-
 /* ===========================
    DOMAČA STRAN – PONUDBA
 =========================== */
+.home-offer-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 
 .home-offer-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
+  margin-bottom: 35px;
 }
 
 .home-offer-link {
@@ -579,7 +435,7 @@ body {
 }
 
 /* ===========================
-   DOMAČA STRAN – GALERIJA
+DOMAČA STRAN – KONTAKT
 =========================== */
 
 .home-contact-cta {
@@ -599,20 +455,142 @@ body {
 }
 
 /* ===========================
+   Footer
+=========================== */
+.site-footer {
+  background: #667a3c;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.footer-content {
+  text-align: left;
+  padding: 18px 20px;
+}
+
+.footer-content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.footer-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding-top: 30px;
+}
+
+.footer-column h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.footer-column p {
+  margin: 6px 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.footer-icons a {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.footer-icons a:hover {
+  background: #c9a227;
+}
+
+.footer-navigation ul {
+  list-style: none;
+}
+
+.footer-navigation li {
+  margin-bottom: 7px;
+}
+
+.footer-navigation a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-navigation a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 18px;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+
+  background: #76551f;
+  color: #fff !important;
+  border: none;
+  border-radius: 50%;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 30px;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#scrollTopBtn:hover {
+  background: #8c662b;
+}
+
+/* ===========================
    TABLET
 =========================== */
-@media (min-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
 
+@media (min-width: 500px) and (max-width: 767px) {
+  .home-offer-grid {
+    width: 100%;
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
   .hero {
-    min-height: 95vh;
     padding-top: 120px;
   }
 
   .hero h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .hero p {
@@ -624,14 +602,19 @@ body {
     transform: none;
   }
 
-  /* Domača stran */
-
-  .home-content {
-    padding: 55px 45px;
+  .scroll-down-text {
+    font-size: 16px;
   }
 
-  .home-about-text h2,
-  .home-section-heading h2 {
+  .scroll-down i {
+    font-size: 45px;
+  } /* Domača stran */
+
+  .home-content {
+    padding: 35px 65px 55px;
+  }
+
+  .home-about-text h2 {
     font-size: 35px;
   }
 
@@ -640,25 +623,21 @@ body {
     gap: 40px 25px;
   }
 
+  .home-offer-title {
+    font-size: 35px;
+  }
+
   .home-offer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 768px) {
-    .home-contact-cta h2 {
-      font-size: 35px;
-    }
-  }
-
-  .footer-details {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    gap: 40px;
+  .home-contact-cta h2 {
+    font-size: 35px;
   }
 }
 
 /* ===========================
-   DESKTOP
+DESKTOP
 =========================== */
 @media (min-width: 1024px) {
   .nav-toggle {
@@ -666,8 +645,6 @@ body {
   }
 
   .header-content {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
@@ -680,12 +657,8 @@ body {
   }
 
   .main-nav ul {
-    display: flex;
     flex-direction: row;
     gap: 25px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 
   .main-nav li {
@@ -706,22 +679,19 @@ body {
   }
 
   .hero {
-    min-height: 95vh;
     padding-top: 95px;
   }
 
   .hero h1 {
-    font-size: 55px;
+    font-size: 52px;
   }
 
   .hero p {
     font-size: 25px;
   }
 
-  /* Domača stran */
-
   .home-content {
-    padding: 65px 55px;
+    padding: 35px 65px 55px;
   }
 
   .home-about {
@@ -740,10 +710,15 @@ body {
   .home-offer-link {
     height: 300px;
   }
+  .footer-details {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    column-gap: 60px;
+  }
 }
 
 /* ===========================
-   VELIKI ZASLONI
+DESKTOP LARGE
 =========================== */
 @media (min-width: 1280px) {
   .page-content {
@@ -756,41 +731,17 @@ body {
     padding-left: 70px;
   }
 
-  .home-divider {
-    margin-top: 65px;
-    margin-bottom: 65px;
+  .hero h1 {
+    font-size: 56px;
   }
 
-  .home-offer-grid {
-    gap: 30px;
+  .hero p {
+    font-size: 27px;
   }
-}
 
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  background: #b68c3d;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-
-  width: 50px;
-  height: 50px;
-
-  font-size: 25px;
-  cursor: pointer;
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition: 0.5s;
-  z-index: 2;
-}
-
-/* ko je aktiven */
-#scrollTopBtn.show {
-  opacity: 1;
-  pointer-events: auto;
+  .home-offer-title,
+  .home-about-text h2,
+  .home-contact-cta h2 {
+    font-size: 37px;
+  }
 }

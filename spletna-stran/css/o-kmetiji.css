@@ -2,27 +2,27 @@
    O KMETIJI - mobile first
 =========================== */
 
-.ok-vsebina {
-  margin-bottom: 50px;
+.vsebina {
+  margin-bottom: 30px;
 }
 
-.ok-opis {
+.opis {
   padding: 20px;
   max-width: 750px;
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
 }
 
-.ok-opis h2 {
-  font-size: 24px;
+.opis h2 {
+  font-size: 28px;
   margin-bottom: 15px;
 }
 
-.ok-opis p {
-  margin-bottom: 12px;
+.opis p {
+  margin-bottom: 5px;
 }
 
 /* Carousel */
-.ok-carousel {
+.carousel {
   position: relative;
   max-width: 500px;
   margin: 0 auto 20px;
@@ -30,24 +30,24 @@
   border-radius: 8px;
 }
 
-.ok-carousel-link {
+.carousel-link {
   text-decoration: none;
   display: block;
   position: relative;
 }
 
-.ok-slide {
-  display: none;
+.slider-image {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  height: auto;
+  display: none;
+  border-radius: 8px;
 }
 
-.ok-slide.active {
+.slider-image.active {
   display: block;
 }
 
-.ok-carousel-overlay {
+.carousel-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -60,65 +60,113 @@
   font-weight: bold;
 }
 
-/* Kje smo */
-.kje-smo {
-  max-width: 600px;
-  margin: 50px auto 60px;
+/* ===========================
+   AKTIVNOSTI
+=========================== */
+
+.aktivnosti-vsebina {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px 0px;
+}
+
+.aktivnosti-opis h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.aktivnosti-opis p {
+  margin: 0;
+}
+
+.aktivnosti-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 20px;
+}
+
+.aktivnost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
   text-align: center;
 }
 
-.kje-smo h2 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.kje-smo p {
-  margin-bottom: 20px;
-}
-
-.kje-smo img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 6px;
-  border: 1px solid #d4a843;
-  display: block;
-  margin: 0 auto;
+.aktivnost i {
+  color: #3f4f28;
+  font-size: 35px;
 }
 
 /* Tablet */
+@media (min-width: 500px) and (max-width: 767px) {
+  .carousel {
+    width: 100%;
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 768px) {
-  .ok-opis {
+  .opis {
     padding: 30px 40px;
   }
 
-  .ok-opis h2 {
-    font-size: 28px;
+  .opis h2 {
+    font-size: 30px;
   }
 
-  .ok-slide {
-    height: 350px;
+  .aktivnosti-vsebina {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+
+    /* Enak odmik kot pri zgornji vsebini */
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .aktivnosti-opis,
+  .aktivnosti-grid {
+    width: 50%;
   }
 }
 
 /* Desktop */
-@media (min-width: 1280px) {
-  .ok-vsebina {
+@media (min-width: 1024px) {
+  .vsebina {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
   }
 
-  .ok-opis {
+  .opis {
     flex: 1;
     margin-bottom: 0;
   }
 
-  .ok-carousel {
+  .carousel {
     flex: 0 0 45%;
-    margin-top: 55px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .vsebina {
+    gap: 40px;
   }
 
-  .ok-slide {
-    height: 380px;
+  .opis p,
+  .aktivnosti-opis p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .opis h2,
+  .aktivnosti-opis h2 {
+    font-size: 32px;
   }
 }

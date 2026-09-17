@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>Cenik | Turistična kmetija Smodiš</title>
+    <meta
+      name="description"
+      content="Preverite cene ter razpoložljive popuste na Turistični kmetiji Smodiš."
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cenik.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cenik.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="js/main.js"></script>
   </head>
 
@@ -35,39 +50,55 @@
 
     <section class="podstrani-hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
+        fetchpriority="high"
       />
     </section>
 
     <main class="container page-content">
       <h1 class="page-title">Cenik</h1>
 
-      <div class="price-layout">
-        <table class="price-table">
-          <tr>
-            <th>Storitev</th>
-            <th>Cena na osebo</th>
-          </tr>
-          <tr>
-            <td>Nočitev</td>
-            <td>31,50 €</td>
-          </tr>
-          <tr>
-            <td>Nočitev z zajtrkom</td>
-            <td>40,00 €</td>
-          </tr>
-          <tr>
-            <td>Polpenzion</td>
-            <td>54,00 €</td>
-          </tr>
-        </table>
+      <section class="cenik-grid" aria-label="Cene nastanitev">
+  <article class="cenik-kartica">
+    <h2>Nočitev</h2>
+
+    <p class="cenik-opis">Udobna nastanitev na turistični kmetiji</p>
+
+    <p class="cenik-cena">
+      <strong>31,50 €</strong>
+      <span>na osebo</span>
+    </p>
+  </article>
+
+  <article class="cenik-kartica">
+    <h2>Nočitev z zajtrkom</h2>
+
+    <p class="cenik-opis">Nastanitev z domačim zajtrkom</p>
+
+    <p class="cenik-cena">
+      <strong>40,00 €</strong>
+      <span>na osebo</span>
+    </p>
+  </article>
+
+  <article class="cenik-kartica">
+    <h2>Polpenzion</h2>
+
+    <p class="cenik-opis">Nastanitev z zajtrkom in večerjo</p>
+
+    <p class="cenik-cena">
+      <strong>54,00 €</strong>
+      <span>na osebo</span>
+    </p>
+  </article>
+</section>
 
         <div class="price-note">
           <p>
@@ -96,17 +127,10 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

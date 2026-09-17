@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>Turistična kmetija Smodiš | Oddih na Goričkem</title>
+    <meta
+      name="description"
+      content="Doživite sproščujoč oddih na Turistični kmetiji Smodiš ter odkrijte domačo kulinariko, udobne nastanitve in pristno naravo Goričkega."
+    />
 
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -42,14 +50,14 @@
 
     <section class="hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp 1000w,
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
           img/hero2000.webp 2000w
         "
         sizes="100vw"
-        alt="Turistična kmetija Smodiš"
+        alt="Naslovna slika"
         class="hero-bg-img"
         fetchpriority="high"
       />
@@ -62,7 +70,7 @@
       <a
         href="#zacetna-vsebina"
         class="scroll-down"
-        aria-label="Pomakni se do vsebine"
+        aria-label="Odkrijte več vsebine"
       >
         <span class="scroll-down-text">Odkrijte več</span>
         <i class="fa-solid fa-angles-down" aria-hidden="true"></i>
@@ -71,47 +79,72 @@
 
     <main id="zacetna-vsebina" class="container page-content home-content">
       <!-- Glavni deli ponudbe -->
-      <section class="home-offer" aria-label="Ponudba">
+      <section class="home-offer" aria-labelledby="naslov-ponudbe">
+        <h2 id="naslov-ponudbe" class="home-offer-title">
+          Spoznajte našo ponudbo
+        </h2>
+
+        <hr class="locilo" />
+
         <div class="home-offer-grid">
           <a href="ponudba.html#nastanitev" class="home-offer-link">
             <img
-              src="img/24.jpg"
+              src="img/nastanitev-1.jpg"
+              srcset="
+                img/nastanitev-1-small.jpg 400w,
+                img/nastanitev-1.jpg       700w
+              "
+              sizes="(max-width: 767px) 70vw, 45vw"
+              width="700"
+              height="525"
               loading="lazy"
-              alt="Udobno urejena soba na turistični kmetiji"
+              alt="Ponudba nastanitve na turistični kmetiji Smodiš"
             />
             <span>Nastanitev</span>
           </a>
 
           <a href="ponudba.html#gostinski-prostor" class="home-offer-link">
             <img
-              src="img/gostinski_prostor.jpg"
+              src="img/ponudba-1.jpg"
+              srcset="img/ponudba-1-small.jpg 400w, img/ponudba-1.jpg 700w"
+              sizes="(max-width: 767px) 70vw, 45vw"
+              width="700"
+              height="525"
               loading="lazy"
-              alt="Večnamenski gostinski prostor"
+              alt="Ponudba gostinskega prostora na turistični kmetiji Smodiš"
             />
             <span>Večnamenski prostor</span>
           </a>
 
           <a href="ponudba.html#kulinarika" class="home-offer-link">
             <img
-              src="img/kulinarika.jpg"
+              src="img/ponudba-4.jpg"
+              srcset="img/ponudba-4-small.jpg 400w, img/ponudba-4.jpg 700w"
+              sizes="(max-width: 767px) 70vw, 45vw"
+              width="700"
+              height="525"
               loading="lazy"
-              alt="Domača prekmurska kulinarika"
+              alt="Ponudba domače kulinarike na turistični kmetiji Smodiš"
             />
             <span>Domača kulinarika</span>
           </a>
 
           <a href="ponudba.html#aktivnosti" class="home-offer-link">
             <img
-              src="img/aktivnosti.jpg"
+              src="img/kmetija-12.jpg"
+              srcset="img/kmetija-12-small.jpg 400w, img/kmetija-12.jpg 700w"
+              sizes="(max-width: 767px) 70vw, 45vw"
+              width="700"
+              height="525"
               loading="lazy"
-              alt="Aktivnosti v naravi na Goričkem"
+              alt="Ponudba aktivnosti in sprostitev na turistični kmetiji Smodiš"
             />
             <span>Aktivnosti in sprostitev</span>
           </a>
         </div>
       </section>
 
-      <hr class="home-divider" />
+      <hr class="locilo" />
 
       <section class="home-about">
         <div class="home-about-text">
@@ -140,15 +173,15 @@
           </div>
 
           <div class="home-feature">
-            <i class="fa-solid fa-users" aria-hidden="true"></i>
-            <strong>Do 25 gostov</strong>
-            <span>Z možnostjo dodatnih ležišč</span>
+            <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+            <strong>Praznovanja in pikniki</strong>
+            <span>Za različne priložnosti</span>
           </div>
 
           <div class="home-feature">
-            <i class="fa-solid fa-shower" aria-hidden="true"></i>
-            <strong>Lastne kopalnice</strong>
-            <span>V vsaki sobi</span>
+            <i class="fa-solid fa-water-ladder" aria-hidden="true"></i>
+            <strong>Bližina term</strong>
+            <span>Za sprostitev in oddih</span>
           </div>
 
           <div class="home-feature">
@@ -171,7 +204,7 @@
         </div>
       </section>
 
-      <hr class="home-divider" />
+      <hr class="locilo" />
 
       <!-- Predogled galerije -->
       <section class="home-contact-cta">
@@ -191,17 +224,10 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

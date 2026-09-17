@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turistična kmetija Smodiš</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>O kmetiji | Turistična kmetija Smodiš</title>
+
+    <meta
+      name="description"
+      content="Spoznajte Turistično kmetijo Smodiš, njeno zgodbo, domače okolje ter možnosti za sprostitev in aktivnosti na Goričkem."
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/o-kmetiji.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script defer src="js/main.js"></script>
+    <script defer src="js/o-kmetiji.js"></script>
   </head>
 
   <body>
@@ -35,22 +51,23 @@
 
     <section class="podstrani-hero">
       <img
-        src="img/hero1000.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/hero500.webp   500w,
-          img/hero1000.webp  750w,
-          img/hero2000.webp 1000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
+        fetchpriority="high"
       />
     </section>
 
     <main class="container page-content">
       <h1 class="page-title">O kmetiji</h1>
 
-      <div class="ok-vsebina">
-        <section class="ok-opis">
+      <div class="vsebina">
+        <section class="opis">
           <h2>Dobrodošli na kmetiji Smodiš</h2>
           <p>
             Smo 4 članska družina specializirana za sadjarstvo in
@@ -70,21 +87,45 @@
             kosmatinca Rino in Rina, z druge strani kmetije pa mogoče tudi osla
             Naci in Miško z ovčjo družbo.
           </p>
-          <p>
-            Naša kmetija ne ponuja le gostoljubja, temveč tudi raznolikost naše
-            kmetije, ki vas popelje v svet narave, polnega različnih živali in
-            pristnih, pozabljenih vrst sadja.
-          </p>
         </section>
 
-        <div class="ok-carousel">
-          <a href="galerija.html" class="ok-carousel-link">
-            <div class="ok-carousel-track">
-              <img src="img/2.jpg" alt="Kmetija" class="ok-slide active" />
-              <img src="img/10.jpg" alt="Kmetija" class="ok-slide" />
-              <img src="img/3.jpg" alt="Kmetija" class="ok-slide" />
+        <div class="carousel">
+          <a href="galerija.html" class="carousel-link">
+            <div class="carousel-track">
+              <img
+                src="img/kmetija-2.jpg"
+                srcset="img/kmetija-2-small.jpg 400w, img/kmetija-2.jpg 700w"
+                sizes="(max-width: 767px) 70vw, 500px"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Turistična kmetija in okolica"
+                class="slider-image active"
+              />
+
+              <img
+                src="img/zivali-3.jpg"
+                srcset="img/zivali-3-small.jpg 400w, img/zivali-3.jpg 700w"
+                sizes="(max-width: 767px) 70vw, 500px"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Turistična kmetija in okolica"
+                class="slider-image"
+              />
+
+              <img
+                src="img/kmetija-12.jpg"
+                srcset="img/kmetija-12-small.jpg 400w, img/kmetija-12.jpg 700w"
+                sizes="(max-width: 767px) 70vw, 500px"
+                width="700"
+                height="525"
+                loading="lazy"
+                alt="Turistična kmetija in okolica"
+                class="slider-image"
+              />
             </div>
-            <div class="ok-carousel-overlay">
+            <div class="carousel-overlay">
               <span>Oglej si celotno galerijo</span>
             </div>
           </a>
@@ -93,30 +134,48 @@
 
       <hr class="locilo" />
 
-      <section class="kje-smo">
-        <h2>Kje smo?</h2>
-        <p>
-          Nahajamo se v vasi Otovci, 200 m izven vasi Mačkovci, ob smerokazu za
-          vas Otovci. V vasi Mačkovci je tudi železniška postaja — po dogovoru
-          vam ponudimo tudi prevoz do naše kmetije.
-        </p>
-        <img src="img/karta.jpg" alt="Karta lokacije kmetije Smodiš" />
+      <section class="aktivnosti-vsebina">
+        <div class="aktivnosti-opis">
+          <h2>Aktivno in sproščeno na Goričkem</h2>
+
+          <p>
+            Mirna okolica kmetije ponuja številne možnosti za sprostitev in
+            aktivno preživljanje prostega časa. Goričko lahko raziskujete peš
+            ali s kolesom, obiščete zanimivosti v okolici ali se sprostite ob
+            kopanju in wellness ponudbi.
+          </p>
+        </div>
+
+        <div class="aktivnosti-grid">
+          <div class="aktivnost">
+            <i class="fa-solid fa-person-swimming" aria-hidden="true"></i>
+            <span>Bazen in wellness</span>
+          </div>
+
+          <div class="aktivnost">
+            <i class="fa-solid fa-bicycle" aria-hidden="true"></i>
+            <span>Kolesarjenje</span>
+          </div>
+
+          <div class="aktivnost">
+            <i class="fa-solid fa-person-hiking" aria-hidden="true"></i>
+            <span>Pohodništvo</span>
+          </div>
+
+          <div class="aktivnost">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            <span>Raziskovanje Goričkega</span>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <h2>Turistična kmetija Smodiš</h2>
-
-        <p class="footer-slogan">
-          Mir, narava in domačnost v osrčju Goričkega.
-        </p>
-
         <div class="footer-details">
           <!-- Naslov -->
           <div class="footer-column">
-            <h3>Naslov</h3>
-            <p><strong>Turistična kmetija Smodiš</strong></p>
+            <h3>Turistična kmetija Smodiš</h3>
             <p>Otovci 58a</p>
             <p>9202 Mačkovci</p>
           </div>

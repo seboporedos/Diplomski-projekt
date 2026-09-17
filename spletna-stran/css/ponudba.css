@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 20px;
   padding-bottom: 20px;
   scroll-margin-top: 100px;
@@ -19,6 +19,7 @@
 
 .ponudba-slika img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   display: block;
 }
@@ -59,14 +60,28 @@
 .carousel-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-65%);
-  background: none;
-  border: none;
-  text-shadow: 0 0 8px rgba(1, 1, 1, 1);
+  transform: translateY(-80%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 50px;
+  padding: 0;
+
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
+  border: none;
+  border-radius: 5px;
+
   font-size: 50px;
   cursor: pointer;
-  padding: 10px 10px;
+}
+
+.carousel-btn span {
+  line-height: 1;
+  transform: translateY(-5px);
 }
 
 .carousel-btn.prev {
@@ -87,13 +102,22 @@
   height: 10px;
   background: #ccc;
   border-radius: 50%;
-  margin: 0 4px;
+  margin: 0 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .dot.active {
   background: #b48e1f;
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .ponudba-slika {
+    width: 100%;
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @media (min-width: 768px) {
@@ -111,8 +135,29 @@
   .ponudba-tekst {
     flex: 1;
   }
+}
 
+@media (min-width: 1024px) {
   .ponudba-tekst h2 {
-    font-size: 35px;
+    font-size: 32px;
+  }
+
+  .ponudba-sekcija {
+    justify-content: space-between;
+  }
+
+  .ponudba-tekst {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ponudba-sekcija {
+    gap: 36px;
+  }
+
+  .ponudba-tekst p {
+    font-size: 17px;
+    line-height: 1.6;
   }
 }
