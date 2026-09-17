@@ -30,12 +30,6 @@
   border-radius: 8px;
 }
 
-.carousel-link {
-  text-decoration: none;
-  display: block;
-  position: relative;
-}
-
 .slider-image {
   width: 100%;
   height: auto;
@@ -60,10 +54,15 @@
   font-weight: bold;
 }
 
-/* ===========================
-   AKTIVNOSTI
-=========================== */
+.carousel-overlay {
+  transition: background-color 0.3s ease;
+}
 
+.carousel-link:hover .carousel-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* AKTIVNOSTI */
 .aktivnosti-vsebina {
   display: flex;
   flex-direction: column;
@@ -123,8 +122,6 @@
     flex-direction: row;
     align-items: center;
     gap: 40px;
-
-    /* Enak odmik kot pri zgornji vsebini */
     padding-right: 50px;
     padding-left: 50px;
   }

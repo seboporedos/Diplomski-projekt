@@ -2,7 +2,6 @@
    PONUDBA - mobile first
 =========================== */
 
-/* Vsaka sekcija: slika zgoraj, tekst spodaj */
 .ponudba-sekcija {
   display: flex;
   flex-direction: column;
@@ -21,7 +20,6 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  display: block;
 }
 
 .ponudba-tekst h2 {
@@ -38,9 +36,7 @@
   text-align: left;
 }
 
-/* ===========================
-   CAROUSEL
-=========================== */
+/* CAROUSEL */
 .carousel {
   position: relative;
   overflow: hidden;

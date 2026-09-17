@@ -51,7 +51,6 @@
 }
 
 .lightbox-wrapper img {
-  display: block;
   max-width: 85vw;
   max-height: 85vh;
   border-radius: 5px;
