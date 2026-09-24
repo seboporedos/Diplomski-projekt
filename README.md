@@ -36,13 +36,13 @@ Prilagodljivo spletno mesto za Turistično kmetijo Smodiš, izdelano v okviru di
 - Validacija in pošiljanje kontaktnega obrazca
 - Interactive Google Maps
 
-## Zagon projekta
+## Ogled in zagon projekta
 
-Projekt ne zahteva namestitve dodatnih paketov.
+Spletno mesto je neposredno dostopno prek GitHub Pages:
 
-Repozitorij prenesite ali klonirajte, nato pa odprite datoteko `index.html` v spletnem brskalniku.
+[Odpri spletno mesto](https://seboporedos.github.io/Diplomski-projekt/)
 
-Za pravilno delovanje vseh funkcionalnosti je priporočljiv zagon prek lokalnega strežnika, na primer z razširitvijo Live Server.
+Projekt ne zahteva namestitve dodatnih paketov. Za lokalni ogled lahko repozitorij prenesete ali klonirate in nato v spletnem brskalniku odprete datoteko index.html.
 
 ## Avtor
 
