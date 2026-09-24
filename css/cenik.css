@@ -1,0 +1,107 @@
+/* ===========================
+   CENIK
+=========================== */
+
+.cenik-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 240px;
+  margin: 35px auto;
+}
+
+.cenik-kartica {
+  display: flex;
+  min-height: 270px;
+  flex-direction: column;
+  padding: 25px 20px;
+  border: 2px solid #d2b15a;
+  border-top-width: 6px;
+  border-radius: 8px;
+  background: #f8f2e2;
+  text-align: center;
+}
+
+.cenik-kartica h2 {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 18px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(125, 92, 22, 0.35);
+  font-size: 23px;
+}
+
+.cenik-kartica:nth-child(2) h2 {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.cenik-opis {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.cenik-cena {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.cenik-cena strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #7d5c16;
+  font-size: 36px;
+}
+
+.cenik-cena span {
+  font-size: 16px;
+}
+
+.price-note {
+  max-width: 500px;
+  margin: 35px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.price-note .btn-primary {
+  margin-top: 18px;
+}
+
+.popusti {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.popusti-naslov {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.popusti p {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .cenik-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 700px;
+    gap: 25px;
+  }
+
+  .cenik-kartica {
+    padding: 20px 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cenik-grid {
+    gap: 30px;
+  }
+}
