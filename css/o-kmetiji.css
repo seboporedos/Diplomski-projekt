@@ -26,8 +26,27 @@
   position: relative;
   max-width: 500px;
   margin: 0 auto 20px;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 8px;
+}
+
+.carousel-link:focus-visible {
+  outline: 3px solid #b68c3d;
+  outline-offset: 1px;
+}
+
+.carousel-link {
+  display: block;
+  position: relative;
+}
+
+.btn-primary.slider-toggle {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  margin: 8px auto 4px;
+  padding: 0;
+  font-size: 15px;
 }
 
 .slider-image {

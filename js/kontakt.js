@@ -1,6 +1,12 @@
-emailjs.init({
-  publicKey: "tsW2nGJcWF_L58Yzq",
-});
+const emailjsNaVoljo =
+  typeof window.emailjs?.init === "function" &&
+  typeof window.emailjs?.sendForm === "function";
+
+if (emailjsNaVoljo) {
+  emailjs.init({
+    publicKey: "tsW2nGJcWF_L58Yzq",
+  });
+}
 
 const obrazec = document.querySelector("#contactForm");
 const imeInput = document.querySelector("#name");
@@ -12,6 +18,18 @@ const zadevaNapaka = document.querySelector("#zadevaNapaka");
 const messageInput = document.querySelector("#message");
 const messageNapaka = document.querySelector("#messageNapaka");
 const uspehSporocilo = document.querySelector("#uspehSporocilo");
+
+function prikaziNapakoPosiljanja() {
+  const telefon = document.createElement("a");
+  telefon.href = "tel:+38625516050";
+  telefon.textContent = "02 551 60 50";
+
+  uspehSporocilo.replaceChildren(
+    "Pri pošiljanju je prišlo do napake, zato vašega sporočila nismo prejeli. Za informacije ali povpraševanje nas lahko pokličete na ",
+    telefon,
+    ".",
+  );
+}
 
 obrazec.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -88,6 +106,10 @@ obrazec.addEventListener("submit", function (event) {
 
   // Preverjanje pošiljanja obrazca
   if (obrazecVeljaven) {
+    if (!emailjsNaVoljo) {
+      prikaziNapakoPosiljanja();
+      return;
+    }
     const gumbPoslji = obrazec.querySelector('button[type="submit"]');
 
     gumbPoslji.disabled = true;
@@ -97,13 +119,12 @@ obrazec.addEventListener("submit", function (event) {
       .sendForm("service_sebo", "template_xmo185j", obrazec)
       .then(() => {
         uspehSporocilo.textContent =
-          "Hvala za vaše sporočilo! Uspešno je bilo poslano.";
+          "Hvala za vaše sporočilo. Uspešno smo ga prejeli in vam bomo odgovorili v najkrajšem možnem času.";
 
         obrazec.reset();
       })
       .catch(() => {
-        uspehSporocilo.textContent =
-          "Pri pošiljanju je prišlo do napake. Poskusite znova.";
+        prikaziNapakoPosiljanja();
       })
       .finally(() => {
         gumbPoslji.disabled = false;

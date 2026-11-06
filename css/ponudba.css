@@ -99,12 +99,19 @@
   background: #ccc;
   border-radius: 50%;
   margin: 0 5px;
+  padding: 0;
+  border: 0;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .dot.active {
   background: #b48e1f;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #3f4f28;
+  outline-offset: 3px;
 }
 
 @media (min-width: 500px) and (max-width: 767px) {

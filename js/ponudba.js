@@ -7,8 +7,16 @@ let current = 0;
 function goToSlide(index) {
   current = index;
   track.style.transform = `translateX(-${current * 100}%)`;
-  dots.forEach((d) => d.classList.remove("active"));
-  if (dots[current]) dots[current].classList.add("active");
+  dots.forEach((dot, i) => {
+    const jeTrenutna = i === current;
+    dot.classList.toggle("active", jeTrenutna);
+
+    if (jeTrenutna) {
+      dot.setAttribute("aria-current", "true");
+    } else {
+      dot.removeAttribute("aria-current");
+    }
+  });
 }
 
 document.querySelector(".carousel-btn.next")?.addEventListener("click", () => {

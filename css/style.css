@@ -131,12 +131,14 @@ body {
 
   max-height: 0;
   overflow: hidden;
+  visibility: hidden;
 
   transition: max-height 0.5s ease;
 }
 
 .main-nav.open {
   max-height: 500px;
+  visibility: visible;
 }
 
 .main-nav ul {
@@ -627,6 +629,7 @@ body {
     max-height: none;
     margin-left: auto;
     overflow: visible;
+    visibility: visible;
   }
 
   .main-nav ul {

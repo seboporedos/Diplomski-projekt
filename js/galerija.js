@@ -12,6 +12,7 @@ const lightboxNext = document.getElementById("lightboxNext");
 let idx = 0;
 let prikazaneSlike = Array.from(slike);
 let zacetekDotika;
+let sprozilnaSlika = null;
 
 // FILTRIRANJE SLIK GLEDE NA IZBRANO KATEGORIJO
 filterGalerija.addEventListener("change", () => {
@@ -45,6 +46,7 @@ slike.forEach((slika) => {
   slika.setAttribute("role", "button");
 
   function odpriLightbox() {
+    sprozilnaSlika = slika;
     idx = prikazaneSlike.indexOf(slika);
     prikaziSliko();
     lightbox.classList.add("active");
@@ -61,9 +63,13 @@ slike.forEach((slika) => {
   });
 });
 
-lightboxClose.addEventListener("click", () => {
+function zapriLightbox() {
   lightbox.classList.remove("active");
-});
+  sprozilnaSlika?.focus({ preventScroll: true });
+  sprozilnaSlika = null;
+}
+
+lightboxClose.addEventListener("click", zapriLightbox);
 
 lightboxPrev.addEventListener("click", () => {
   idx = (idx - 1 + prikazaneSlike.length) % prikazaneSlike.length;
@@ -78,8 +84,22 @@ lightboxNext.addEventListener("click", () => {
 document.addEventListener("keydown", (event) => {
   if (!lightbox.classList.contains("active")) return;
 
+  if (event.key === "Tab") {
+    const fokus = document.activeElement;
+
+    if (event.shiftKey && fokus === lightboxClose) {
+      event.preventDefault();
+      lightboxNext.focus();
+    } else if (!event.shiftKey && fokus === lightboxNext) {
+      event.preventDefault();
+      lightboxClose.focus();
+    }
+
+    return;
+  }
+
   if (event.key === "Escape") {
-    lightbox.classList.remove("active");
+    zapriLightbox();
   }
 
   if (event.key === "ArrowLeft") {
@@ -93,7 +113,7 @@ document.addEventListener("keydown", (event) => {
 
 lightbox.addEventListener("click", (event) => {
   if (event.target === lightbox) {
-    lightbox.classList.remove("active");
+    zapriLightbox();
   }
 });
 
