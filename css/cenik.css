@@ -63,14 +63,19 @@
 }
 
 .price-note {
-  max-width: 500px;
+  max-width: 600px;
   margin: 35px auto;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .price-note .btn-primary {
   margin-top: 18px;
+}
+
+.price-note a[href^="tel:"] {
+  color: #755617;
+  text-decoration: underline;
 }
 
 .popusti {

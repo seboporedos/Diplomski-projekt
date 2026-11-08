@@ -84,6 +84,11 @@ body {
   outline-offset: 3px;
 }
 
+.offer-contact-link {
+  color: #755617;
+  text-decoration: underline;
+}
+
 /* HEADER */
 .header {
   background: #3f4f28;
