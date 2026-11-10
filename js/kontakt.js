@@ -19,11 +19,11 @@ const messageInput = document.querySelector("#message");
 const messageNapaka = document.querySelector("#messageNapaka");
 const uspehSporocilo = document.querySelector("#uspehSporocilo");
 
-function prikaziNapakoPosiljanja() {
-  const telefon = document.createElement("a");
-  telefon.href = "tel:+38625516050";
-  telefon.textContent = "02 551 60 50";
+const telefon = document.createElement("a");
+telefon.href = "tel:+38625516050";
+telefon.textContent = "02 551 60 50";
 
+function prikaziNapakoPosiljanja() {
   uspehSporocilo.replaceChildren(
     "Pri pošiljanju je prišlo do napake, zato vašega sporočila nismo prejeli. Za informacije ali povpraševanje nas lahko pokličete na ",
     telefon,
@@ -118,8 +118,11 @@ obrazec.addEventListener("submit", function (event) {
     emailjs
       .sendForm("service_sebo", "template_xmo185j", obrazec)
       .then(() => {
-        uspehSporocilo.textContent =
-          "Hvala za vaše sporočilo. Uspešno smo ga prejeli in vam bomo odgovorili v najkrajšem možnem času.";
+        uspehSporocilo.replaceChildren(
+          "Hvala za vaše sporočilo. Uspešno smo ga prejeli in vam bomo odgovorili v najkrajšem možnem času. Za neposredne informacije nas lahko pokličete na ",
+          telefon,
+          ".",
+        );
 
         obrazec.reset();
       })

@@ -31,7 +31,7 @@
 }
 
 .carousel-link:focus-visible {
-  outline: 3px solid #b68c3d;
+  outline: 3px solid var(--zlata-temna);
   outline-offset: 1px;
 }
 
@@ -66,7 +66,7 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: var(--bela);
   text-align: center;
   padding: 12px;
   font-size: 16px;
@@ -114,7 +114,7 @@
 }
 
 .aktivnost i {
-  color: #3f4f28;
+  color: var(--zelena-temna);
   font-size: 35px;
 }
 

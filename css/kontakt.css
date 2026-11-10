@@ -14,7 +14,7 @@
 }
 
 .kontakt-info a {
-  color: #87631f;
+  color: var(--rjava-svetla);
   text-decoration: none;
 }
 
@@ -43,17 +43,15 @@
   font-weight: bold;
   margin-bottom: 6px;
   font-size: 14px;
-  color: #444;
 }
 
 .obrazec-polje input,
 .obrazec-polje textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--siva);
   border-radius: 6px;
   font-size: 15px;
-  background: #faf9f5;
   transition: border-color 0.3s;
 }
 
@@ -64,16 +62,16 @@
 .obrazec-polje input:focus,
 .obrazec-polje textarea:focus {
   outline: none;
-  border-color: #b68c3d;
+  border-color: var(--zlata-temna);
 }
 
 .obrazec-polje input.napaka-input,
 .obrazec-polje textarea.napaka-input {
-  border-color: #b68c3d;
+  border-color: var(--zlata-temna);
 }
 
 .napaka {
-  color: #7d5c16;
+  color: var(--rjava);
   font-size: 13px;
   margin-top: 4px;
   min-height: 18px;
@@ -85,10 +83,14 @@
 
 .uspeh {
   text-align: center;
-  color: #2d5235;
   font-weight: bold;
   margin-top: 20px;
   min-height: 24px;
+}
+
+#uspehSporocilo a {
+  color: var(--rjava-svetla);
+  text-decoration: underline;
 }
 
 .uspeh:not(:empty) {
@@ -118,7 +120,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
-  border: 1px solid #d4a843;
+  border: 1px solid var(--zlata-svetla);
 }
 
 .mapa-container iframe {
@@ -153,7 +155,6 @@
 
 .delovni-cas-tabela td:first-child {
   text-align: center;
-  color: #444;
 }
 
 .delovni-cas-tabela td:last-child {

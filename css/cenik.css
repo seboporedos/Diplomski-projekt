@@ -16,10 +16,10 @@
   min-height: 270px;
   flex-direction: column;
   padding: 25px 20px;
-  border: 2px solid #d2b15a;
+  border: 2px solid var(--zlata-svetla);
   border-top-width: 6px;
   border-radius: 8px;
-  background: #f8f2e2;
+  background: var(--ozadje-kartic);
   text-align: center;
 }
 
@@ -41,7 +41,6 @@
 
 .cenik-opis {
   margin: 0;
-  color: #555;
   font-size: 15px;
   line-height: 1.4;
 }
@@ -54,7 +53,7 @@
 .cenik-cena strong {
   display: block;
   margin-bottom: 5px;
-  color: #7d5c16;
+  color: var(--rjava);
   font-size: 36px;
 }
 
@@ -74,7 +73,7 @@
 }
 
 .price-note a[href^="tel:"] {
-  color: #755617;
+  color: var(--rjava-temna);
   text-decoration: underline;
 }
 

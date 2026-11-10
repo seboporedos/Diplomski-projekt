@@ -67,7 +67,7 @@
   padding: 0;
 
   background: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: var(--bela);
   border: none;
   border-radius: 5px;
 
@@ -96,7 +96,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: #ccc;
+  background: var(--siva);
   border-radius: 50%;
   margin: 0 5px;
   padding: 0;
@@ -106,11 +106,11 @@
 }
 
 .dot.active {
-  background: #b48e1f;
+  background: var(--zlata-temna);
 }
 
 .dot:focus-visible {
-  outline: 2px solid #3f4f28;
+  outline: 2px solid var(--zelena-temna);
   outline-offset: 3px;
 }
 

@@ -41,7 +41,7 @@
   right: 30px;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--bela);
   font-size: 30px;
   cursor: pointer;
 }
@@ -62,8 +62,8 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  text-shadow: 0 0 10px #000;
-  color: #fff;
+  text-shadow: 0 0 10px var(--crna);
+  color: var(--bela);
   font-size: 60px;
   cursor: pointer;
   padding: 10px;
@@ -93,10 +93,9 @@
   max-width: 210px;
   min-height: 30px;
   padding: 10px 10px;
-  border: 2px solid #b68c3d;
+  border: 2px solid var(--zlata-temna);
   border-radius: 4px;
-  background: #f8f2e2;
-  color: #2b2b2b;
+  background: var(--ozadje-kartic);
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
@@ -104,13 +103,13 @@
 
 #filterGalerija:focus,
 #filterGalerija:focus-visible {
-  border-color: #b68c3d;
-  outline: 2px solid #3f4f28;
+  border-color: var(--zlata-temna);
+  outline: 2px solid var(--zelena-temna);
   outline-offset: 2px;
 }
 
 .galerija-grid img:focus-visible {
-  outline: 3px solid #b68c3d;
+  outline: 3px solid var(--zlata-temna);
   outline-offset: 1px;
 }
 
