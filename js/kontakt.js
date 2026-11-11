@@ -31,10 +31,15 @@ function prikaziNapakoPosiljanja() {
   );
 }
 
+function preveriPolje(input, izpisNapake, sporociloNapake) {
+  izpisNapake.textContent = sporociloNapake;
+  input.classList.toggle("napaka-input", sporociloNapake !== "");
+
+  return sporociloNapake === "";
+}
+
 obrazec.addEventListener("submit", function (event) {
   event.preventDefault();
-
-  let obrazecVeljaven = true;
 
   uspehSporocilo.textContent = "";
 
@@ -43,66 +48,52 @@ obrazec.addEventListener("submit", function (event) {
   const zadeva = zadevaInput.value.trim();
   const message = messageInput.value.trim();
 
-  // Preverjanje ime in priimek
-  imeNapaka.textContent = "";
-  imeInput.classList.remove("napaka-input");
+  // Preverjanje imena in priimka
+  let napakaIme = "";
 
   if (ime === "") {
-    imeNapaka.textContent = "Vnesite ime in priimek.";
-    imeInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaIme = "Vnesite ime in priimek.";
   } else if (ime.length < 2) {
-    imeNapaka.textContent = "Ime mora vsebovati vsaj 2 znaka.";
-    imeInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaIme = "Ime mora vsebovati vsaj 2 znaka.";
   } else if (!/^[\p{L}\s'-]+$/u.test(ime)) {
-    imeNapaka.textContent =
-      "Ime lahko vsebuje samo črke, presledke, vezaje in apostrofe.";
-    imeInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaIme = "Ime lahko vsebuje samo črke, presledke, vezaje in apostrofe.";
   }
 
-  // Preverjanje email
-  emailNapaka.textContent = "";
-  emailInput.classList.remove("napaka-input");
+  // Preverjanje e-poštnega naslova
+  let napakaEmail = "";
 
   if (email === "") {
-    emailNapaka.textContent = "Vnesite e-poštni naslov.";
-    emailInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaEmail = "Vnesite e-poštni naslov.";
   } else if (emailInput.validity.typeMismatch) {
-    emailNapaka.textContent = "Vnesite veljaven e-poštni naslov.";
-    emailInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaEmail = "Vnesite veljaven e-poštni naslov.";
   }
 
-  // Preverjanje zadeva
-  zadevaNapaka.textContent = "";
-  zadevaInput.classList.remove("napaka-input");
+  // Preverjanje zadeve
+  let napakaZadeva = "";
 
   if (zadeva === "") {
-    zadevaNapaka.textContent = "Vnesite zadevo sporočila.";
-    zadevaInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaZadeva = "Vnesite zadevo sporočila.";
   } else if (zadeva.length < 3) {
-    zadevaNapaka.textContent = "Zadeva mora vsebovati vsaj 3 znake.";
-    zadevaInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaZadeva = "Zadeva mora vsebovati vsaj 3 znake.";
   }
 
   // Preverjanje sporočila
-  messageNapaka.textContent = "";
-  messageInput.classList.remove("napaka-input");
+  let napakaMessage = "";
 
   if (message === "") {
-    messageNapaka.textContent = "Vnesite sporočilo.";
-    messageInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaMessage = "Vnesite sporočilo.";
   } else if (message.length < 10) {
-    messageNapaka.textContent = "Sporočilo mora vsebovati vsaj 10 znakov.";
-    messageInput.classList.add("napaka-input");
-    obrazecVeljaven = false;
+    napakaMessage = "Sporočilo mora vsebovati vsaj 10 znakov.";
   }
+
+  const rezultatiPreverjanja = [
+    preveriPolje(imeInput, imeNapaka, napakaIme),
+    preveriPolje(emailInput, emailNapaka, napakaEmail),
+    preveriPolje(zadevaInput, zadevaNapaka, napakaZadeva),
+    preveriPolje(messageInput, messageNapaka, napakaMessage),
+  ];
+
+  const obrazecVeljaven = rezultatiPreverjanja.every(Boolean);
 
   // Preverjanje pošiljanja obrazca
   if (obrazecVeljaven) {
