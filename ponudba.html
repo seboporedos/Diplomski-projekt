@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>Ponudba | Turistična kmetija Smodiš</title>
-    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg" />
     <meta
       name="description"
       content="Oglejte si raznoliko ponudbo na Turistični kmetiji Smodiš."
@@ -28,7 +28,6 @@
       property="og:image"
       content="https://seboporedos.github.io/Diplomski-projekt/img/logo.jpg"
     />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/ponudba.css" />
@@ -50,7 +49,9 @@
   </head>
 
   <body>
-    <button id="scrollTopBtn" aria-label="Na vrh">↑</button>
+    <button id="scrollTopBtn" type="button" aria-label="Na vrh">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <header class="header">
       <div class="container header-content">
@@ -81,11 +82,11 @@
 
     <div class="podstrani-hero">
       <img
-        src="img/webp/hero1200.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/webp/hero800.webp   800w,
-          img/webp/hero1200.webp 1200w,
-          img/webp/hero2000.webp 2000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Naslovna slika podstrani ponudba"
@@ -123,23 +124,23 @@
           >
             <div class="carousel-track">
               <img
-                src="img/webp/nastanitev-1.webp"
+                src="img/nastanitev-1.webp"
                 srcset="
-                  img/webp/nastanitev-1-small.webp 400w,
-                  img/webp/nastanitev-1.webp       700w
+                  img/nastanitev-1-small.webp 400w,
+                  img/nastanitev-1.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
                 height="525"
                 loading="lazy"
-                alt="Primer ene izmed sob za nastanitev na turistični kmetiji Smodiš"
+                alt="Primer ležišča v sobi za nastanitev na turistični kmetiji Smodiš"
               />
 
               <img
-                src="img/webp/nastanitev-2.webp"
-                srcset="
-                  img/webp/nastanitev-2-small.webp 400w,
-                  img/webp/nastanitev-2.webp       700w
+                data-src="img/nastanitev-2.webp"
+                data-srcset="
+                  img/nastanitev-2-small.webp 400w,
+                  img/nastanitev-2.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -149,10 +150,10 @@
               />
 
               <img
-                src="img/webp/nastanitev-3.webp"
-                srcset="
-                  img/webp/nastanitev-3-small.webp 400w,
-                  img/webp/nastanitev-3.webp       700w
+                data-src="img/nastanitev-3.webp"
+                data-srcset="
+                  img/nastanitev-3-small.webp 400w,
+                  img/nastanitev-3.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -162,10 +163,10 @@
               />
 
               <img
-                src="img/webp/nastanitev-4.webp"
-                srcset="
-                  img/webp/nastanitev-4-small.webp 400w,
-                  img/webp/nastanitev-4.webp       700w
+                data-src="img/nastanitev-4.webp"
+                data-srcset="
+                  img/nastanitev-4-small.webp 400w,
+                  img/nastanitev-4.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -243,10 +244,10 @@
           >
             <div class="carousel-track">
               <img
-                src="img/webp/praznovanja-1.webp"
+                src="img/praznovanja-1.webp"
                 srcset="
-                  img/webp/praznovanja-1-small.webp 400w,
-                  img/webp/praznovanja-1.webp       700w
+                  img/praznovanja-1-small.webp 400w,
+                  img/praznovanja-1.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -256,10 +257,10 @@
               />
 
               <img
-                src="img/webp/praznovanja-6.webp"
-                srcset="
-                  img/webp/praznovanja-6-small.webp 400w,
-                  img/webp/praznovanja-6.webp       700w
+                data-src="img/praznovanja-6.webp"
+                data-srcset="
+                  img/praznovanja-6-small.webp 400w,
+                  img/praznovanja-6.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -268,10 +269,10 @@
                 alt="Osvetljen bazen in šotor ob večernem dogodku na zunanjem prostoru za praznovanja"
               />
               <img
-                src="img/webp/praznovanja-5.webp"
-                srcset="
-                  img/webp/praznovanja-5-small.webp 400w,
-                  img/webp/praznovanja-5.webp       700w
+                data-src="img/praznovanja-5.webp"
+                data-srcset="
+                  img/praznovanja-5-small.webp 400w,
+                  img/praznovanja-5.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -280,10 +281,10 @@
                 alt="Pogrnjene mize pod belim šotorom na zunanjem prostoru za praznovanja"
               />
               <img
-                src="img/webp/praznovanja-3.webp"
-                srcset="
-                  img/webp/praznovanja-3-small.webp 400w,
-                  img/webp/praznovanja-3.webp       700w
+                data-src="img/praznovanja-3.webp"
+                data-srcset="
+                  img/praznovanja-3-small.webp 400w,
+                  img/praznovanja-3.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -292,10 +293,10 @@
                 alt="Notranji prostor urejen za praznovanje"
               />
               <img
-                src="img/webp/praznovanja-7.webp"
-                srcset="
-                  img/webp/praznovanja-7-small.webp 400w,
-                  img/webp/praznovanja-7.webp       700w
+                data-src="img/praznovanja-7.webp"
+                data-srcset="
+                  img/praznovanja-7-small.webp 400w,
+                  img/praznovanja-7.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
@@ -370,11 +371,8 @@
         </div>
         <div class="ponudba-slika">
           <img
-            src="img/webp/ponudba-1.webp"
-            srcset="
-              img/webp/ponudba-1-small.webp 400w,
-              img/webp/ponudba-1.webp       700w
-            "
+            data-src="img/ponudba-1.webp"
+            srcset="img/ponudba-1-small.webp 400w, img/ponudba-1.webp 700w"
             sizes="(max-width: 768px) 70vw, 40vw"
             loading="lazy"
             alt="Primer domače kulinarike na turistični kmetiji Smodiš"
@@ -413,11 +411,8 @@
           >
             <div class="carousel-track">
               <img
-                src="img/webp/ponudba-5.webp"
-                srcset="
-                  img/webp/ponudba-5-small.webp 400w,
-                  img/webp/ponudba-5.webp       700w
-                "
+                src="img/ponudba-5.webp"
+                srcset="img/ponudba-5-small.webp 400w, img/ponudba-5.webp 700w"
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
                 height="525"
@@ -426,24 +421,18 @@
               />
 
               <img
-                src="img/webp/ponudba-4.webp"
-                srcset="
-                  img/webp/ponudba-4-small.webp 400w,
-                  img/webp/ponudba-4.webp       700w
-                "
+                data-src="img/ponudba-4.webp"
+                data-srcset="img/ponudba-4-small.webp 400w, img/ponudba-4.webp 700w"
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
                 height="525"
                 loading="lazy"
-                alt="Pogled na bazen na turistični kmetiji Smodiš"
+                alt="Pogled na bazen in teraso na turistični kmetiji Smodiš"
               />
 
               <img
-                src="img/webp/ponudba-3.webp"
-                srcset="
-                  img/webp/ponudba-3-small.webp 400w,
-                  img/webp/ponudba-3.webp       700w
-                "
+                data-src="img/ponudba-3.webp"
+                data-srcset="img/ponudba-3-small.webp 400w, img/ponudba-3.webp 700w"
                 sizes="(max-width: 767px) 70vw, 40vw"
                 width="700"
                 height="525"
@@ -549,6 +538,11 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+        <p>
+          <a href="zasebnost.html" class="povezava-zasebnost">
+            Politika zasebnosti
+          </a>
+        </p>
       </div>
     </footer>
   </body>

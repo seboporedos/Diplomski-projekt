@@ -7,6 +7,17 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
   function goToSlide(index) {
     current = (index + slides.length) % slides.length;
+    const slika = slides[current];
+
+    if (slika.dataset.src) {
+      if (slika.dataset.srcset) {
+        slika.srcset = slika.dataset.srcset;
+        delete slika.dataset.srcset;
+      }
+
+      slika.src = slika.dataset.src;
+      delete slika.dataset.src;
+    }
     track.style.transform = `translateX(-${current * 100}%)`;
 
     slides.forEach((slide, i) => {

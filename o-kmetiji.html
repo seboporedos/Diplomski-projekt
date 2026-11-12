@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>O kmetiji | Turistična kmetija Smodiš</title>
-    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg" />
     <meta
       name="description"
       content="Spoznajte Turistično kmetijo Smodiš, njeno zgodbo, domače okolje ter možnosti za sprostitev in aktivnosti na Goričkem."
@@ -49,7 +49,9 @@
   </head>
 
   <body>
-    <button id="scrollTopBtn" aria-label="Na vrh">↑</button>
+    <button id="scrollTopBtn" type="button" aria-label="Na vrh">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <header class="header">
       <div class="container header-content">
@@ -80,11 +82,11 @@
 
     <div class="podstrani-hero">
       <img
-        src="img/webp/hero1200.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/webp/hero800.webp   800w,
-          img/webp/hero1200.webp 1200w,
-          img/webp/hero2000.webp 2000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Turistična kmetija Smodiš"
@@ -120,11 +122,8 @@
           <a href="galerija.html" class="carousel-link">
             <div class="carousel-track">
               <img
-                src="img/webp/kmetija-2.webp"
-                srcset="
-                  img/webp/kmetija-2-small.webp 400w,
-                  img/webp/kmetija-2.webp       700w
-                "
+                src="img/kmetija-2.webp"
+                srcset="img/kmetija-2-small.webp 400w, img/kmetija-2.webp 700w"
                 sizes="(max-width: 767px) 70vw, 500px"
                 width="700"
                 height="525"
@@ -134,11 +133,8 @@
               />
 
               <img
-                src="img/webp/kmetija-1.webp"
-                srcset="
-                  img/webp/kmetija-1-small.webp 400w,
-                  img/webp/kmetija-1.webp       700w
-                "
+                src="img/kmetija-1.webp"
+                srcset="img/kmetija-1-small.webp 400w, img/kmetija-1.webp 700w"
                 sizes="(max-width: 767px) 70vw, 500px"
                 width="700"
                 height="525"
@@ -148,10 +144,10 @@
               />
 
               <img
-                src="img/webp/kmetija-11.webp"
+                src="img/kmetija-11.webp"
                 srcset="
-                  img/webp/kmetija-11-small.webp 400w,
-                  img/webp/kmetija-11.webp       700w
+                  img/kmetija-11-small.webp 400w,
+                  img/kmetija-11.webp       700w
                 "
                 sizes="(max-width: 767px) 70vw, 500px"
                 width="700"
@@ -272,6 +268,11 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+        <p>
+          <a href="zasebnost.html" class="povezava-zasebnost">
+            Politika zasebnosti
+          </a>
+        </p>
       </div>
     </footer>
   </body>

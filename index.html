@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>Turistična kmetija Smodiš | Oddih na Goričkem</title>
-    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg" />
     <meta
       name="description"
       content="Doživite sproščujoč oddih na Turistični kmetiji Smodiš ter odkrijte domačo kulinariko, udobne nastanitve in pristno naravo Goričkega."
@@ -47,7 +47,9 @@
   </head>
 
   <body>
-    <button id="scrollTopBtn" aria-label="Na vrh">↑</button>
+    <button id="scrollTopBtn" type="button" aria-label="Na vrh">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <header class="header">
       <div class="container header-content">
@@ -78,11 +80,11 @@
 
     <section class="hero">
       <img
-        src="img/webp/hero1200.webp"
+        src="img/hero1200.webp"
         srcset="
-          img/webp/hero800.webp   800w,
-          img/webp/hero1200.webp 1200w,
-          img/webp/hero2000.webp 2000w
+          img/hero800.webp   800w,
+          img/hero1200.webp 1200w,
+          img/hero2000.webp 2000w
         "
         sizes="100vw"
         alt="Naslovna slika turistične kmetije Smodiš"
@@ -117,10 +119,10 @@
         <div class="home-offer-grid">
           <a href="ponudba.html#nastanitev" class="home-offer-link">
             <img
-              src="img/webp/nastanitev-1.webp"
+              src="img/nastanitev-1.webp"
               srcset="
-                img/webp/nastanitev-1-small.webp 400w,
-                img/webp/nastanitev-1.webp       700w
+                img/nastanitev-1-small.webp 400w,
+                img/nastanitev-1.webp       700w
               "
               sizes="(max-width: 767px) 70vw, 45vw"
               width="700"
@@ -133,10 +135,10 @@
 
           <a href="ponudba.html#poroke-in-praznovanja" class="home-offer-link">
             <img
-              src="img/webp/praznovanja-1.webp"
+              src="img/praznovanja-1.webp"
               srcset="
-                img/webp/praznovanja-1-small.webp 400w,
-                img/webp/praznovanja-1.webp       700w
+                img/praznovanja-1-small.webp 400w,
+                img/praznovanja-1.webp       700w
               "
               sizes="(max-width: 767px) 70vw, 45vw"
               width="700"
@@ -149,11 +151,8 @@
 
           <a href="ponudba.html#kulinarika" class="home-offer-link">
             <img
-              src="img/webp/ponudba-1.webp"
-              srcset="
-                img/webp/ponudba-1-small.webp 400w,
-                img/webp/ponudba-1.webp       700w
-              "
+              src="img/ponudba-1.webp"
+              srcset="img/ponudba-1-small.webp 400w, img/ponudba-1.webp 700w"
               sizes="(max-width: 767px) 70vw, 45vw"
               width="700"
               height="525"
@@ -165,11 +164,8 @@
 
           <a href="ponudba.html#aktivnosti" class="home-offer-link">
             <img
-              src="img/webp/ponudba-5.webp"
-              srcset="
-                img/webp/ponudba-5-small.webp 400w,
-                img/webp/ponudba-5.webp       700w
-              "
+              src="img/ponudba-5.webp"
+              srcset="img/ponudba-5-small.webp 400w, img/ponudba-5.webp 700w"
               sizes="(max-width: 767px) 70vw, 45vw"
               width="700"
               height="525"
@@ -317,6 +313,11 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Turistična kmetija Smodiš. Vse pravice pridržane.</p>
+        <p>
+          <a href="zasebnost.html" class="povezava-zasebnost">
+            Politika zasebnosti
+          </a>
+        </p>
       </div>
     </footer>
   </body>

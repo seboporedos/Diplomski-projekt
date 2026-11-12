@@ -72,11 +72,6 @@
   margin-top: 18px;
 }
 
-.price-note a[href^="tel:"] {
-  color: var(--rjava-temna);
-  text-decoration: underline;
-}
-
 .popusti {
   max-width: 500px;
   margin: 30px auto;

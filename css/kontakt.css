@@ -14,7 +14,8 @@
 }
 
 .kontakt-info a {
-  color: var(--rjava-svetla);
+  font-weight: 800;
+  color: var(--zelena-temna);
   text-decoration: none;
 }
 
@@ -83,13 +84,14 @@
 
 .uspeh {
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 20px;
   min-height: 24px;
 }
 
 #uspehSporocilo a {
-  color: var(--rjava-svetla);
+  font-weight: 800;
+  color: var(--zelena-temna);
   text-decoration: underline;
 }
 
@@ -165,6 +167,12 @@
 .delovni-cas-opomba {
   margin-top: 12px;
   font-style: italic;
+}
+
+.privolitev {
+  max-width: 650px;
+  margin: 20px auto;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

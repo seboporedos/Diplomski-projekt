@@ -41,6 +41,13 @@ function preveriPolje(input, izpisNapake, sporociloNapake) {
 obrazec.addEventListener("submit", function (event) {
   event.preventDefault();
 
+  const privolitev = document.querySelector("#zasebnostPrivolitev");
+
+  if (!privolitev.checked) {
+    privolitev.reportValidity();
+    return;
+  }
+
   uspehSporocilo.textContent = "";
 
   const ime = imeInput.value.trim();

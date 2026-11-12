@@ -15,8 +15,8 @@
   --zlata-temna: #b68c3d;
 
   /* Zeleni odtenki */
-  --zelena-temna: #3f4f28;
   --zelena-svetla: #667a3c;
+  --zelena-temna: #3f4f28;
 
   /* Osnovne barve */
   --bela: #fff;
@@ -74,7 +74,7 @@ body {
   margin: 30px auto 20px;
   border-bottom: 4px solid var(--zlata-svetla);
   padding-bottom: 5px;
-  max-width: 350px;
+  max-width: 400px;
 }
 
 .btn-primary {
@@ -110,7 +110,8 @@ body {
 }
 
 .offer-contact-link {
-  color: var(--rjava-svetla);
+  font-weight: 800;
+  color: var(--zelena-temna);
   text-decoration: underline;
 }
 
@@ -405,7 +406,6 @@ body {
   border-radius: 8px;
   color: var(--bela);
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(45, 45, 45, 0.15);
 }
 
 .home-offer-link img {
@@ -415,28 +415,26 @@ body {
   transition: transform 0.4s ease;
 }
 
-.home-offer-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.05) 35%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
-}
-
 .home-offer-link span {
   position: absolute;
-  right: 20px;
-  bottom: 18px;
-  left: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--bela);
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.home-offer-link:hover span,
+.home-offer-link:focus-visible span {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .home-offer-link:hover img {
@@ -547,6 +545,13 @@ body {
   font-size: 14px;
 }
 
+.footer-bottom .povezava-zasebnost {
+  color: var(--bela);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 #scrollTopBtn {
   position: fixed;
   bottom: 65px;
@@ -577,6 +582,10 @@ body {
 
 #scrollTopBtn:hover {
   background: var(--rjava-svetla);
+}
+
+#scrollTopBtn i {
+  font-size: 30px;
 }
 
 /* TABLET */

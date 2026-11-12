@@ -1,0 +1,15 @@
+.zasebnost section {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.zasebnost h2 {
+  margin-bottom: 12px;
+}
+
+.zasebnost a {
+  font-weight: 800;
+  color: var(--zelena-temna);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
